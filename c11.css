@@ -1,0 +1,42 @@
+h3{
+	color:red;
+	font-weight:bold;
+}
+th{
+	background-color:hotpink;
+}
+table{
+	border:2px solid green;
+}
+tr:hover{
+	background-color:deeppink;
+}
+.window{
+	list-style-type:none;
+}
+.window a{
+	float:left;
+	display:block;
+	background-color:pink;
+	padding:3px;
+}
+.window a:hover{
+	background-color:deeppink;
+}
+.time{
+	width:200px;
+	height:50px;
+	border:1px dotted red;
+	padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+

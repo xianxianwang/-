@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>练习</title>
+<link rel="stylesheet" href="c1.css" />
+<script src="JS1.js"></script>
+
+</head>
+
+
+<body>
+<div class="head">
+<div class="h1">
+<a href="" class="a1">练习</a>
+</div>
+
+
+</div>
+
+<div class="middle">
+<ul class="u">
+<li class="l"><a href="" class="a2">HTML</a></li>
+<li class="l"><a href="" class="a2">CSS</a> </li>
+<li class="l"><a href="" class="a2">JS</a> </li>
+<li class="l"><a href="" class="a2">JQUERY</a></li>
+<li class="l"><a href="" class="a2">BOOTSTRAP</a></li>
+<li class="l"><a href="" class="a2">SQL</a></li>
+<li class="l"><a href="" class="a2">PHP</a></li>
+</ul>
+ 
+
+</div>
+
+<div class="center">
+<div class="left">
+<ul>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%201.html?">
+HTML事件</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%202.html"
+>
+HTML画布</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%203.html"
+style="color:red"
+>HTML音频、视频
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%204.html"
+>CSS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%205.html"
+>CSS3
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%206.html">
+响应式设计
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%207.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%208.html"
+>HTML5
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%209.html"
+>JQUERY
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2010.html"
+>BOOTSTRAP</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2011.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2012.html"
+>React
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2013.html"
+>Angular JS
+</a></li>
+</ul>
+
+
+</div>
+<div class="right">
+<p>方法</p>
+<p>检测能否播放音频视频</p>
+<p>能否播放音频？<span>
+<button onclick="isSupport(event,'video/mp4','avc1.42E01E,mp4a.40.2')" >测试</button></span> </p>
+<p>能否播放视频？<span>
+<button onclick="isSupport(event,'video/ogg','theora,vorbis')">测试</button>
+</span> </p>
+<script type="text/javascript">
+function isSupport(e,vidType,codType)
+{
+   myVid=document.createElement('video');
+  isSupp=myVid.canPlayType(vidType+';codecs="'+codType+'"');
+  if (isSupp=="")
+  {
+    isSupp="No";
+  }
+  e.target.parentNode.innerHTML="Answer: " + isSupp;
+}
+
+</script>
+<p>加载load</p>
+<video  id="v1" width="300"  height="200"  controls > 
+<source  id="s1" src="D:/movie.mp4"></source>
+</video>
+<br />
+<button onclick="changeSrc()">切换资源</button>
+<br />
+<button onclick="getTime()">获得当前位置</button>
+<button onclick="setTime()">设置当前位置</button>
+ 
+<button onclick="getMuted()">返回默认是否静音</button>
+<button onclick="setMuted()">设置静音并加载</button>
+
+<button onclick="getPlayRate()">获得默认播放速度</button>
+<button onclick="setPlayRate()">设置播放速度</button>
+<br />
+<button onclick="getDuration()">返回当前视频长度</button>
+<button onclick="getEnded()">检测视频播放是否结束</button>
+<br />
+<button onclick="getLoop()">返回是否重播</button>
+<button onclick="setLoop()">设置结束后重播</button>
+<br />
+<button onclick="setmuted()">静音</button>
+<button onclick="setNomuted()">启用音效</button>
+<button onclick="getmuted()">检查静音状态</button>
+<script type="text/javascript">
+function changeSrc()
+{
+document.getElementById("s1").src="";
+document.getElementById("v1").load();
+}
+</script>
+<p>播放，暂停</p>
+<video id="v2"  width="300"  height="200" >
+<source src="D:/movie.mp4"> 
+</video>
+<br />
+<button onclick="playVid()">播放</button>
+<button onclick="pauseVid()">暂停</button>
+<br />
+<button onclick="enableAutoPlay()">启用自动播放</button>
+<button onclick="disenableAutoPlay()">禁止自动播放</button>
+<button onclick="checkPlay()">查看播放状态</button>
+<br />
+<button onclick="getBufferTime()">查看缓冲范围</button>
+<br />
+<button onclick="disableControls()">禁止控件</button>
+<button onclick="enableControls()">启用控件</button>
+<button onclick="checkControls()">查看控件状态</button>
+<br />
+<button onclick="getURL()">获得当前视频的URL</button>
+<button onclick="getNetworkstate()">获得当前网络状态</button>
+<button onclick="getPaused()">返回视频是否暂停</button>
+<br /> 
+<button onclick="getplayrate()">返回当前播放速度</button>
+<button onclick="setplayrate()">设置播放速度</button>
+<button onclick="getplayed()">返回已播视频范围</button>
+<br />
+<button onclick="getpreload()">返回是否在页面加载后立即加载音频/视频</button>
+<button onclick="setpreload()">设置是否在页面加载后立即加载音频/视频</button>
+<br />
+<button onclick="getReadystate()">返回当前视频的就绪状态</button>
+<br />
+<button onclick="setSrc()">改变视频的来源</button>
+<br />
+<button onclick="getVolume()">返回当前音量</button>
+<button onclick="setVolume()">设置音量</button>
+<h3>HTML视频事件</h3>
+<audio id="a1" controls>
+<source src="D:/song.mp3"> 
+</audio>
+<br />
+<button onclick="changeRate()">改变视频速度</button>
+<p>目前播放时间点： <span id="demo"></span></p>
+<p>当前音量： <span id="vol"></span></p>
+<script type="text/javascript">
+var myAud=document.getElementById("a1");
+myAud.onended=function()
+{
+alert("movie end");
+}
+myAud.onpause=function()
+{
+alert("audio pause");
+}
+myAud.onplay=function()
+{
+alert("audio play");
+}
+function changeRate()
+{
+var myAud=document.getElementById("a1");
+myAud.playbackRate=0.3;
+}
+myAud.onratechange=function()
+{
+alert("change rate");
+}
+myAud.onseeked=function()
+{
+alert("seeking");
+}
+myAud.ontimeupdate=function()
+{
+document.getElementById("demo").innerHTML=myAud.currentTime;
+}
+myAud.onvolumechange=function()
+{
+document.getElementById("vol").innerHTML=myAud.volume;
+}
+</script>
+
+
+
+
+</div>
+
+
+</div>
+
+</body>
+</html>

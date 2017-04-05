@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>练习</title>
+<link rel="stylesheet" href="c1.css" />
+<link rel="stylesheet" href="c3.css" />
+<script src="JS1.js"></script>
+<script type="text/javascript" src="JS7.js"></script>
+</head>
+
+
+<body  onkeyup="whichButton(event)">
+<div class="head">
+<div class="h1">
+<a href="" class="a1">练习</a>
+</div>
+
+
+</div>
+
+<div class="middle">
+<ul class="u">
+<li class="l"><a href="" class="a2">HTML</a></li>
+<li class="l"><a href="" class="a2">CSS</a> </li>
+<li class="l"><a href="" class="a2">JS</a> </li>
+<li class="l"><a href="" class="a2">JQUERY</a></li>
+<li class="l"><a href="" class="a2">BOOTSTRAP</a></li>
+<li class="l"><a href="" class="a2">SQL</a></li>
+<li class="l"><a href="" class="a2">PHP</a></li>
+</ul>
+ 
+
+</div>
+
+<div class="center">
+<div class="left">
+<ul>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%201.html?">
+HTML事件</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%202.html"
+>
+HTML画布</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%203.html"
+>HTML音频、视频
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%204.html"
+>CSS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%205.html"
+>CSS3
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%206.html"
+>
+响应式设计
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%207.html"
+style="color:red">JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%208.html"
+>HTML5
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%209.html"
+>JQUERY
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2010.html"
+>BOOTSTRAP</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2011.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2012.html"
+>React
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2013.html"
+>Angular JS
+</a></li>
+
+
+</ul>
+</div>
+
+<div class="right">
+ <button onclick="search()">search</button>
+ <span id="s1"></span> <br />
+<button onclick="replace()">replace</button>
+ <span id="s2">hello world</span> <br />
+<button onclick="test()">test</button> 
+<span id="s3">the best thing in life are something.</span>
+<br />
+<button onclick="exec()">exec</button>
+<span id="s4">the best thing in life is something.</span>
+
+<p>try、throw、cantch</p>
+<input type="text" id="t1"/> <button onclick="tryFunction()">测试数值</button>
+<span id="s5"></span>
+<h2>JSON</h2>
+<p>创建JSON对象</p>
+<p>
+网站名称：<span id="name"></span> <br />
+网站地址：<span id="url"></span><br />
+网站slogan: <span id="slo"></span> <br />
+</p>
+<script type="text/javascript">
+var JSONObject={
+"name":"Bird",
+"url": "www.baidu.com",
+"slogan": "something rainning rainning"
+}
+document.getElementById("name").innerHTML=JSONObject.name;
+JSONObject.url="www.tust.edu.cn";
+document.getElementById("url").innerHTML=JSONObject.url;
+document.getElementById("slo").innerHTML=JSONObject.slogan;
+
+</script>
+<p>创建一个数组JSON对象</p>
+<textarea name="" id="" cols="45" rows="5">
+var sites=[
+{"name":"Bird","url":"www.bird.com"},
+{"name":"Baidu","url":"www.baidu.com"},
+{"name":"Tust","url":"www.tust.edu.cn"}
+];
+
+</textarea>
+<p>嵌套数组</p>
+<p id="json"></p>
+<script type="text/javascript">
+var myJson={
+"产地":"China",
+"属科":"植物",
+"class":[
+{"name":"玫瑰","color":["red","blue","yellow"]},
+{"name":"百合","color":["green","white","pink"]},
+{"name":"月季","color":["purple","yellow","aqua"]}
+]
+}
+
+var i,j,x="";
+for(i in myJson.class)
+{
+x+="<h3>" + myJson.class[i].name + "</h3>";
+for(j in myJson.class[i].color)
+{
+x+=myJson.class[i].color[j] + "   ";
+}
+}
+document.getElementById("json").innerHTML=x;
+</script>
+<p>从服务端接收数组的JSON数据</p>
+<p id="webj"></p>
+<script type="text/javascript">
+var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+{
+if(this.readyState ==4 && this.status == 200){
+var myObj=JSON.parse(this.responseText);
+document.getElementById("webj").innerHTML=myObj.name;
+} 
+};
+xmlhttp.open("GET","json.txt",true);
+xmlhttp.send();
+
+</script>
+<p> JSON.parse() 方法将数据转换为 JavaScript 对象</p>
+<p>JSON不支持Date对象,需要将其转换为字符串</p>
+<p id="date"></p>
+<script type="text/javascript">
+var text='{"name":"Bird","initdate":"2017-3-14","url":"www.baidu.com"}';
+var obj=JSON.parse(text);
+obj.initdate=new Date(obj.initdate);
+document.getElementById("date").innerHTML=obj.initdate;
+</script>
+<p>JSON.stringify() 方法将 JavaScript 对象转换为字符串</p>
+<p>date对象</p>
+<p id="sdate"></p>
+<script type="text/javascript">
+var text={"name":"Bird","time":new Date(),"url":"www.baidu.com"};
+var obj=JSON.stringify(text);
+document.getElementById("sdate").innerHTML=obj;
+</script>
+<h2>JS函数</h2>
+<h3>函数调用</h3>
+<p>作为一个函数调用</p><span id="f"></span>
+<script type="text/javascript">
+function myfunction(a,b)
+{
+return a*b;
+}
+document.getElementById("f").innerHTML=myfunction(2,3);
+</script>
+<p>全局对象</p><span id="u"></span>
+<script type="text/javascript">
+function myfunction()
+{return this;}
+document.getElementById("u").innerHTML=myfunction();
+</script>
+<p>函数作为方法调用</p> <span id="n"></span>
+<script type="text/javascript">
+var myObject={
+firstname:"fang",
+lastname:"liu",
+fullname: function(){
+return this.firstname+" "+this.lastname;
+}
+}
+document.getElementById("n").innerHTML=myObject.fullname();
+</script>
+<p>使用构造函数调用函数</p> <span id="c"></span>
+<script type="text/javascript">
+function myfunction(a,b)
+{
+this.firstname=a;
+this.lastname=b;
+}
+var x=new myfunction("hong","yan");
+document.getElementById("c").innerHTML=x.firstname;
+
+</script>
+<p>作为函数方法调用函数</p> 
+<span id="t"></span> <span id="i"></span>
+<script type="text/javascript">
+function myfunction(a,b)
+{
+return a*b;
+}
+myObject=myfunction.call(myObject,10,2);
+document.getElementById("t").innerHTML=myObject;
+</script>
+<script type="text/javascript">
+function myfunction(a,b)
+{
+return a*b;
+}
+myArray=[2,3];
+myObject=myfunction.apply(myObject,myArray);
+document.getElementById("i").innerHTML=myObject;
+
+</script>
+<h2>HTML DOM</h2>
+<span>
+<script type="text/javascript">
+document.write(Date());
+</script>
+</span>
+<h3>EventListener</h3>
+<div id="de" 
+style="width:200px;height:150px;border:1px solid black;
+padding:5px;
+background:pink">
+<p id="event">click me !</p>
+</div>
+<p id="fp"></p>
+<button id="bf" onclick="f2()">移除随机性</button>
+<script type="text/javascript">
+var x=document.getElementById("event");
+x.addEventListener("click",function(){alert("这是段落元素")},false);/*冒泡或捕获*/
+var y=document.getElementById("de");
+y.addEventListener("click",function(){alert("这是块元素")},false);
+y.addEventListener("mousemove",f1);
+function f1()
+{
+document.getElementById("fp").innerHTML=Math.random();
+}
+function f2()
+{
+y.removeEventListener("mousemove",f1);
+}
+
+</script>
+<p>浏览器支持</p>
+<button id="bsupport">点我</button>
+<span id="sa"></span>
+<script type="text/javascript">
+var x=document.getElementById("bsupport");
+if(x.addEventListener)
+{
+x.addEventListener("click",myfunction);
+x.addEventListener("click",myf1);
+}	
+else(x.attachEvent)
+{
+x.attachEvent("click",myfunction);
+x.attachEvent("click",myf2);
+}	
+function myf1()
+{
+document.getElementById("sa").innerHTML="addEventListener";
+}
+function myf2()
+{
+document.getElementById("sa").innerHTML="attachEvent";
+}
+function myfunction()
+{
+alert("Hello World");
+}
+</script>
+<h3>创建，删除新元素</h3>
+<div id="div1">
+<p id="p1">这是第一个段落</p>
+<p id="p2">这是第二个段落</p>
+</div>
+<script type="text/javascript">
+var para=document.createElement("p");
+var node=document.createTextNode("这是一个新段落");
+para.appendChild(node);
+var div=document.getElementById("div1");
+div.appendChild(para);
+var p2=document.getElementById("p2");
+div.removeChild(p2);
+</script>
+<h2>JS高级教程</h2>
+<h3>创建对象</h3>
+<p>创建直接的实例</p>
+<textarea name="" id="" cols="60" rows="8">
+1.
+var person=new Object();
+person.firstname="Dan";
+person.lastname="Fan";
+person.sexual="girl";
+2.
+person={firstname:"Dan",lastname:"Fan",sexual:"girl"};
+</textarea>
+<p>使用对象构造器</p>
+<textarea name="" id="" cols="50" rows="8">
+function person(firstname,lastname,sexual)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.sexual=sexual;
+}
+</textarea>
+<span>实例：</span>
+<textarea name="" id="" cols="55" rows="3">
+var Chinese=new person("Sanfeng","Zhang","man");
+</textarea>
+<p>添加属性</p>
+<textarea name="" id="" cols="30" rows="3">
+person.eyecolor="black";
+</textarea>
+<p>添加方法</p>
+<textarea name="" id="" cols="62" rows="12">
+function person(firstname,lastname,sexual,changename){
+this.firstname=firstname;
+this.lastname=lastname;
+this.sexual=sexual;
+/*添加changename()方法*/
+this.changename=changename;
+function changename(name){
+this.lastname=name;
+}
+}
+</textarea>
+<h3>Number对象</h3>
+<p>Number.toString(num)进制转换:num=16,8,2</p>
+<p>Infinity无穷大</p>
+<p>isNaN()用于判断是否为非数字值(NaN)</p>
+<h3>String</h3>
+<p>length计算长度</p>
+<p>indexOf()定位字符串</p>
+<p>match()查找字符串</p>
+<p>replace()替换</p>
+<p>toUpperCase()/toLowerCase()</p>
+<p>split()转为数组</p>
+<h3>RegExp(reqular expression)</h3>
+<textarea name="" id="" cols="40" rows="5">
+var patt=new RegExp(pattern,modifiers);
+or:
+var patt=/pattern/modifiers;
+</textarea>
+<h3>BOM (browser object <model></model>)</h3>
+<p>计时事件</p>
+<button id="start" onclick="doTime()">开始</button>
+<input type="text" id="timeshow"/>
+<button id="end" onclick="endTime()">结束</button>
+<script type="text/javascript">
+var c=0;
+var on_off=0;
+var t;
+function startTime()
+{
+var x=document.getElementById("timeshow").value=c;
+c=c+1;
+t=setTimeout(function(){startTime()},1000);
+}
+function endTime()
+{
+clearTimeout(t);
+on_off=0;
+}
+function doTime()
+{
+if(!on_off)
+{
+startTime();
+on_off=1;
+c=0;
+}
+}
+
+</script>
+<p>显示时间</p>
+<div  id="sd">
+<span onclick="showDate()"
+style="display:block;position:relative;top:10px">时间</span> <br />
+<input type="text"  id="ts" style="width:100px"/>
+</div>
+<script type="text/javascript">
+var x=document.getElementById("ts");
+function showDate()
+{
+var d=new Date();
+var t=d.toLocaleTimeString();
+x.value=t;
+var pat=setTimeout(function(){showDate()},1000);
+}
+
+</script>
+<p>幻灯片</p>
+<div class="container">
+<div class="fig1" id="fig1">
+<div class="num">1/3</div>
+<img src="w.gif" alt="" class="picture1"/>
+<div class="tex">彼岸花</div>
+<div class="leftr" onclick="tof13()"> 《 </div>
+<div class="rightr" onclick="tof12()"> 》</div>
+
+
+</div>
+
+<div class="fig2" id="fig2">
+<div class="num">2/3</div>
+<img src="h2.jpg" alt="" class="picture2"/>
+<div class="tex">十里长亭</div>
+<div class="leftr" onclick="tof21()"> 《 </div>
+<div class="rightr" onclick="tof23()"> 》</div>
+
+
+</div>
+
+<div class="fig3" id="fig3">
+<div class="num">3/3</div>
+<img src="hehua.jpg" alt="" class="picture3"/>
+<div class="tex">清水出芙蓉</div>
+<div class="leftr" onclick="tof32()"> 《 </div>
+<div class="rightr" onclick="tof31()"> 》</div>
+
+
+</div>
+
+</div>
+<!---->
+<p>日历</p>
+<div class="august">
+<header>
+<p class="pa1">AUGUST <br /> 2016</p>
+<div class="lp">《</div>
+<div class="rp">》</div>
+</header>
+<nav>
+<ul class="ul1">
+<li>Mo</li>
+<li>Tu</li>
+<li>We</li>
+<li>Th</li>
+<li>Fr</li>
+<li>Sa</li>
+</ul>
+<ul class="ul2"><li>Su</li></ul>
+</nav>
+<article>
+<ul class="ul3">
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+</ul>
+<ul class="ul4">
+<li>7</li>
+<li>8</li>
+<li>9</li>
+<li class="li10">10</li>
+<li>11</li>
+<li>12</li>
+</ul>
+<ul class="ul5">
+<li>13</li>
+<li>14</li>
+<li>15</li>
+<li>16</li>
+<li>17</li>
+<li>18</li>
+</ul>
+<ul class="ul6">
+<li>19</li>
+<li>20</li>
+<li>21</li>
+<li>22</li>
+<li>23</li>
+<li>24</li>
+</ul>
+<ul class="ul7">
+<li>25</li>
+<li>26</li>
+<li>27</li>
+<li>28</li>
+<li>29</li>
+<li>30</li>
+</ul>
+<ul class="ul8">
+<li>31</li>
+</ul>
+</article>
+
+</div>
+
+<p>弹窗</p>
+<div class="alertWindow">
+<button onclick="openWindow()">打开弹窗</button>
+<!--弹窗设计-->
+<div id="fullWindow">
+<div class="containWindow">
+
+<div class="wheader">
+<div class="x" onclick="closeWindow()">X</div>
+<p>再别康桥</p>
+</div>
+<div class="wtext">
+<p>轻轻的我走了，正如我轻轻的来；我轻轻地招手，作别西天的云彩。
+那河畔的金柳，是夕阳中的新娘；波光里的艳影，在我的心头荡漾。
+软泥上的青荇，油油的在水底招摇；在康河的柔波里，我甘心做一条水草！
+那榆荫下的一潭，不是清泉，是天上虹；揉碎在浮藻间，沉淀着彩虹似的梦。
+寻梦？撑一支长篙，向青草更青处漫溯；满载一船星辉，在星辉斑斓里放歌。
+但我不能放歌，悄悄是别离的笙箫；夏虫也为我沉默，沉默是今晚的康桥！
+悄悄的我走了，正如我悄悄的来；我挥一挥衣袖，不带走一片云彩。</p>
+</div>
+<div class="wfooter">
+<p>---徐志摩</p>
+</div>
+</div>
+</div>
+</div>
+<p>图片弹窗</p>
+<img src="h3.jpg" alt="" width="300" height="200"
+onclick="imgWindow()" class="imgModal"/>
+
+<!--图片弹窗-->
+
+<div id="modal"> 
+<!--关闭按钮-->
+<span class="xM" onclick="closeModal()">X</span>
+<!--弹窗内容-->
+<img src="h3.jpg" alt="" class="modal_container"/>
+<!--文本描述-->
+<div class="textModal">巫峰</div>
+</div>
+
+<p>LightBox</p>
+
+<div class="row">
+<div class="column">
+<img src="f1.jpg" alt="" onclick="Mopen()"/>
+</div>
+<div class="column">
+<img src="f2.jpg" alt="" onclick="Mopen()"/>
+</div>
+<div class="column">
+<img src="f3.jpg" alt="" onclick="Mopen()"/>
+</div>
+<div class="column">
+<img src="f4.jpg" alt="" onclick="Mopen()"/>
+</div>
+</div>
+
+<!--弹窗-->
+<div id="fModal">
+<div class="xModal" onclick="Mclose()">X</div>
+
+<!--内容-->
+<div class="figCont">
+<!--弹窗图片-->
+<div class="mySlides" id="mySlides">
+<div class="figNum">1/4</div>
+<img src="f1.jpg" alt="" class="figModal"/>
+</div>
+<div class="mySlides" id="mySlides">
+<div class="figNum">2/4</div>
+<img src="f2.jpg" alt="" class="figModal"/>
+</div>
+<div class="mySlides" id="mySlides">
+<div class="figNum">3/4</div>
+<img src="f3.jpg" alt="" class="figModal"/>
+</div>
+<div class="mySlides" id="mySlides">
+<div class="figNum">4/4</div>
+<img src="f4.jpg" alt="" class="figModal"/>
+</div>
+
+<!--左右箭头-->
+<a  class="leftCursor" onclick="plusSlides(-1)">《 </a>
+<a  class="ringhtCursor" onclick="plusSlides(1)"> 》</a>
+
+<!--文本-->
+<div class="cap">
+<p id="texCap">
+</p>
+</div>
+
+<!--弹窗列表-->
+<div class="column" >
+<img src="f1.jpg" alt="蓦然回首，那人却在灯火阑珊去" 
+onclick="currentSlide(1)" class="demo"/>
+</div>
+<div class="column" >
+<img src="f2.jpg" alt="一袭红衣，瞬间芳华" 
+onclick="currentSlide(2)" class="demo"/>
+</div>
+<div class="column" >
+<img src="f3.jpg" alt="桃花坞里桃花仙" 
+onclick="currentSlide(3)" class="demo"/>
+</div>
+<div class="column" >
+<img src="f4.jpg" alt="十里长亭，只等来人" 
+onclick="currentSlide(4)" class="demo"/>
+</div>
+
+</div>
+
+</div>
+
+<!--END-->
+
+<!--搜索框自动提示-->
+<p style="clear:both">搜索框自动提示</p> 
+
+<input type="text" id="texSearch" 
+placeholder="搜索..." onkeyup="searchBox()"/>
+
+<ul class="sc" id="sc">
+<li class="header">A</li>
+<li class="ls">Adele</li>
+<li class="ls">Agnes</li>
+<li class="header">B</li>
+<li class="ls">Billy</li>
+<li class="ls">Bob</li>
+<li class="header">C</li>
+<li class="ls">Calvin</li>
+<li class="ls">Christina</li>
+<li class="ls">Cindy</li>
+</ul>
+
+<!--表格数据搜索--> 
+<p>表格数据搜索</p>
+
+<input type="text" id="tableSearch" 
+onkeyup="searchData()" placeholder="搜索..."/>
+
+<table id="dataBox" 
+rules="rows" >
+<tr class="firstTr">
+<td>名称</td>
+<td>颜色</td>
+</tr>
+<tr>
+<td>rose</td>
+<td>red</td>
+</tr>
+<tr>
+<td>lily</td>
+<td>white</td>
+</tr>
+<tr>
+<td>Jasminum sambac </td>
+<td>whitePink</td>
+</tr>
+<tr>
+<td>Carnation</td>
+<td>yellow</td>
+</tr>
+</table>
+
+<a name="">HTML</a> 
+<a name="">JS</a>
+<a name="">CSS</a> <br />
+<span>
+<script type="text/javascript">
+document.write(document.anchors.length + "   " + document.anchors[0].innerHTML);
+</script>
+</span>
+
+<form action="" id="form1">
+firstname:<input type="text" />
+lastname: <input type="text" />
+<input type="button" value="重置表单"  onclick="freset()"/>
+</form>
+<script type="text/javascript">
+function freset()
+{
+document.getElementById("form1").reset();
+}
+</script>
+<h3>Enent对象</h3>
+<p>按下按键，弹出信息</p>
+<script type="text/javascript">
+function whichButton(event)
+{
+alert(event.keyCode);
+}
+</script>
+<p onmousedown="show_coords(event)">点击文档，会出现文档的相应坐标。</p>
+<p id="demo"></p>
+<script type="text/javascript">
+function show_coords(event){
+var x=event.clientX;
+var y=event.clientY;
+document.getElementById("demo").innerHTML="x: " + x + "y: " +y;
+}
+</script>
+
+<p onmousedown="coordinates(event)">点击文档，显示相对于屏幕的坐标。</p>
+<p id="coor"></p>
+<script type="text/javascript">
+function coordinates(event)
+{
+var x=event.screenX;
+var y=event.screenY;
+document.getElementById("coor").innerHTML="x: " + x + "y: " +y;
+}
+</script>
+
+<p onmousedown="isKeyPressed(event)">点击该段落，会显示shift键是否被按下</p>
+<p id="shiftkey"></p>
+<script type="text/javascript">
+function isKeyPressed(event)
+{
+if(event.shiftKey==1)
+{
+document.getElementById("shiftkey").innerHTML="shift被按下";
+}
+else
+{
+document.getElementById("shiftkey").innerHTML="shift没有被按下";
+}
+}
+
+</script>
+
+<p onmouseover="getEventType(event)">在文档中点击某个位置，消息框会提醒你触发的事件类型</p>
+<p id="type"></p>
+<script type="text/javascript">
+function getEventType(event){
+document.getElementById("type").innerHTML=event.type;
+}
+
+</script>
+
+<h3>Option和Select对象</h3>
+<form action="" id="myForm">
+<select name="" id="mySelect">
+<option value="">苹果</option>
+<option value="">香蕉</option>
+<option value="">梨</option>
+<option value="">橘子</option>
+</select>
+</form>
+<p id="ID"></p>
+<button onclick="useOption()">启用下拉列表</button>
+<button onclick="disOption()">禁止下拉列表</button>
+<button onclick="getID()">获得下拉列表的ID</button>
+<button onclick="changeSize()">修改列表大小</button>
+<button onclick="selectMult()">选择多个选项</button>
+<button onclick="fruitName()">输出水果名称</button> 
+<br />
+<button onclick="fruitNumber()">输出水果索引</button>
+<button onclick="changeText()">改变列表文本内容</button>
+<button onclick="removeOpt()">删除列表</button>
+
+<p>
+列表有几种选择：
+<span>
+<script type="text/javascript">
+document.write(document.getElementById("mySelect").length);
+</script>
+</span>
+</p>
+<p>你喜欢的水果是：
+<span id="fruit"></span>
+</p>
+<p>水果索引为：
+<span id="fNum"></span>
+</p>
+
+<h3>Table</h3>
+<table border="1" id="myTable" style="float:left">
+<tr>
+<td>兰花</td>
+<td>樱花</td>
+</tr>
+<tr>
+<td>芍药</td>
+<td>牡丹</td>
+</tr>
+</table>
+<table id="secondTab" style="float:left;margin-left:100px">
+<tr id="fTr">
+<td>卜算子</td>
+<td>行杳子</td>
+</tr>
+<tr>
+<td>菩萨蛮</td>
+<td>定风波</td>
+</tr>
+</table>
+<table id="thirdTab" border="1" 
+style="float:left;margin-left:100px;width:200px;height:100px">
+<tr id="trTh">
+<th>姓名</th>
+<th>年龄</th>
+</tr>
+<tr id="trTd">
+<td id="td1">大卫</td>
+<td id="td2">23</td>
+</tr>
+</table>
+<br style="clear:both" /> <br />
+<button onclick="changeBorder()">改变表格框宽度</button>
+<button onclick="cellpad()">cellpadding</button>
+<button onclick="cellspace()">cellspacing</button> 
+<button onclick="showRow()">显示行边框</button>
+<button onclick="showCol()">显示列边框</button>
+<button onclick="showTex()">显示第一行的HTML文本</button> <br />
+<button onclick="cellTex()">一个单元格的HTML文本</button>
+<button onclick="createCap()">创建标题</button>
+<br />
+<button onclick="aboveFrame()"  ondblclick="belowFrame()">
+添加边框</button>
+<button onclick="removeTr()">删除行</button>
+<button onclick="createRow()">插入行</button>
+<button onclick="createCell()">插入单元格</button>
+<br />
+<button onclick="alignLeft()">左对齐</button>
+<button onclick="vAlignTop()">垂直对齐</button>
+<button onclick="cellRight()">单元格右对齐</button>
+<button onclick="cellTop()">单元格垂直对齐</button>
+<button onclick="cellTex()">修改单元格内容</button>
+<p id="rowHtml"></p>
+<p id="cellHtml"></p>
+<script type="text/javascript">
+function cellTex(){
+var x=document.getElementById("myTable").rows[0].cells[0];
+x.innerHTML="玉兰";
+}
+</script>
+<table  id="fourthTab" border="1">
+<tr>
+<td colspan="2">白色</td>
+<td colspan="2">红色</td>
+</tr>
+<tr>
+<td>玉兰</td>
+<td>白掌</td>
+<td>牡丹</td>
+<td>芍药</td>
+</tr>
+</table>
+<button onclick="setColSpan()">修改合并列</button>
+<script type="text/javascript">
+function setColSpan(){
+var x=document.getElementById("fourthTab").rows[0].cells;
+x[0].colSpan="3";
+x[1].colSpan="1";
+}
+</script>
+
+
+
+
+
+
+
+<!--right文档结束-->
+</div>
+
+</div>
+
+<div class="footer">
+the author is Xianxian Wang.
+</div>
+
+</body>
+</html>

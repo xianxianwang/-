@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>练习</title>
+<link rel="stylesheet" href="bootstrap.css" />
+<script src="https://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="head">
+<p>练习</p>
+</div>
+
+<div class="nav">
+<ul class="u">
+<li><a href="">HTML</a></li>
+<li><a href="">CSS</a> </li>
+<li><a href="">JS</a> </li>
+<li><a href="">JQUERY</a></li>
+<li><a href="">BOOTSTRAP</a></li>
+<li><a href="">Angular JS</a></li>
+<li><a href="">SQL</a></li>
+</ul>
+ 
+
+</div>
+
+<div class="center">
+<div class="left">
+<ul>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%201.html?">
+HTML事件</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%202.html"
+>
+HTML画布</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%203.html"
+>HTML音频、视频
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%204.html"
+>CSS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%205.html"
+>CSS3
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%206.html"
+>
+响应式设计
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%207.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%208.html"
+>HTML5
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%209.html"
+>JQUERY
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2010.html"
+style="color:red">BOOTSTRAP</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2011.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2012.html"
+>React
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2013.html"
+>Angular JS
+</a></li>
+
+
+
+</ul>
+</div>
+
+<div class="right">
+ 
+<h1>AJAX</h1>
+ <p>综合语句</p>
+ <textarea name="" id="" cols="70" rows="20">
+  <p>创建XML HttpRequest对象</p>
+ var xmlhttp;
+ if(window.XMLHttpRequest){
+ xmlhttp=new XMLHttpRequest();
+ }
+ else{
+ xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ }
+ <p> responseText--获得字符串形式的响应数据</p>
+ xmlhttp.onreadystatechange=function(){
+ if(xmlhttp.readyState=4&&xmlhttp.status==200){
+ document.getElementById(id).innerHTML=xmlhttp.responseText;
+ }
+ }
+  <p>向服务器发送请求</p>
+ xmlhttp.open("GET",url,"true");
+ xmlhttp.send();
+ </textarea>
+ 
+ <h1 style="color:red">Bootstrap</h1>
+ <h3>代码：var, kbd,pre,samp,code</h3>
+ <p>变量：<var>x+y</var></p>
+ <p>按键提示：<kbd>ctrl+p</kbd></p>
+ <p>单行代码：<code> &lt;div&gt;</code></p>
+ <p>多行代码：
+ <pre class="pre-scrollable">
+ &lt;article&gt;
+ &lt;h1&gt;Article Heading&lt;/h1&gt;
+ &lt;/article&gt;
+ </pre>
+ </p>
+ <p>电脑输出：<samp>this is the sample input</samp></p>
+ 
+ <h3>表格</h3>
+ <div class="table-responsive">
+ <table class="table table-hover">
+<caption>响应式表格<code>table-responsive</code></caption>
+ <thead>
+ <tr>
+<th>表格类</th>
+<th><code>&lt;tr&gt;,&lt;th&gt;,&lt;td&gt;</code>类</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="active">
+ <td>.table</td>
+ <td>.active</td>
+ </tr>
+ <tr class="success">
+ <td>.table-striped</td>
+ <td>.success</td>
+ </tr>
+ <tr class="info">
+ <td>.table-border</td>
+ <td>.info</td>
+ </tr>
+ <tr class="warning">
+ <td>.table-hover</td>
+ <td>.warning</td>
+ </tr>
+ <tr class="danger">
+ <td>.table-condensed</td>
+ <td>.danger</td>
+ </tr>
+ </tbody>
+ </table> 
+ </div>
+ 
+ <h3>表单</h3>
+ <p>form: <code>.form(垂直),.form-inline(内联),.form-horizontal(水平)</code></p>
+ <p>fieldset: <code>disabled</code></p>
+ <p>div: <code>.form-group,.has-success,.has-warning,.has-error</code></p>
+ <p>label: <code>.control-label(水平),.checkbox-inline,.radio-inline</code></p>
+ <p>input: <code>.form-control,.input-lg,.input-sm,.col-lg-*,.col-sm-*</code></p>
+ <p>select: <code>mutiple</code></p>
+ <p>p: <code>.form-control-static</code></p>
+ 
+ <form action="" class="form-horizontal">
+ <div class="form-group has-success">
+ <label for="" class="control-label col-sm-2">Email:</label>
+<div class="col-sm-10">
+<p class="form-control-static">wang@163.com</p>
+</div>
+ </div>
+
+ <div class="form-group has-warning">
+ <label for="" class="checkbox-inline">
+ <input type="checkbox" />选项1
+ </label>
+ <label for="" class="checkbox-inline">
+ <input type="checkbox" />选项2
+ </label>
+  <label for="" class="radio-inline">
+ <input type="radio" />选项1
+ </label>
+ <label for="" class="radio-inline">
+ <input type="radio" />选项2
+ </label>
+ </div>
+
+ <div class="form-group has-disabled">
+<label for="name" class="control-label">姓名：</label>
+<input type="text" class="form-control" id="name" placeholder="请输入名字"/>
+<div class="form-group">
+<div class="row"> 
+<label for="" class="control-label col-sm-2">选择</label>
+<div class="col-sm-10">
+<select name="" id="" class="form-control">
+<option value="">1</option>
+<option value="">2</option>
+<option value="">3</option>
+</select>
+</div>
+</div>
+<div class="row">
+<label for="" class="control-label col-sm-3">表单大小</label>
+<div class="col-sm-9">
+<input type="" class="form-control input-sm" placeholder="input-sm"/>
+</div>
+</div>
+</div>
+ </div>
+ </form>
+ 
+ <h3>按钮(以下样式可用于a,button,input)</h3>
+ <p>按钮样式：<code>.btn,.btn-default,.btn-primary,
+ .btn-success,.btn-info,.btn-warning,.btn-danger,
+ .btn-link</code></p> 
+ <p>按钮大小：<code>.btn-lg,.btn-sm,.btn-xs,.btn-block</code></p>
+ <p>按钮状态：<code>disabled(&lt;a class="disabled"&gt;),active</code></p>
+ <a href="" class="btn btn-default">链接(默认按钮)</a>
+ <button class="btn btn-primary">原始按钮</button>
+ <button class="btn btn-success btn-lg">成功按钮</button>
+ <button class="btn btn-info btn-sm">信息按钮</button>
+ <button class="btn btn-warning btn-xs">警告按钮</button>
+ <button class="btn btn-danger" disabled="disabled">危险按钮</button>
+ <button class="btn btn-link" active>链接按钮</button>
+ 
+ <h3>图片</h3>
+ <p>img: <code>.img-rounded,.img-circle,.img-thumbnail(缩略图),.img-responsive</code></p>
+ <img src="f1.jpg" alt="" class="img-rounded"/>
+ <img src="f2.jpg" alt="" class="img-circle"/>
+ <img src="f3.jpg" alt="" class="img-thumbnail"/>
+ <img src="f4.jpg" alt="" class="img-thumbnail img-responsive"/>
+ <h3>辅助类</h3>
+ <p>文本：<code>.text-muted,.text-primary,.text-success,.text-info,.
+ text-warning,.text-danger</code></p>
+ <p>背景：<code>.bg-primary,.bg-success,.bg-info,.bg-warning,.bg-danger</code></p>
+ <p>其他： 
+<code>.pull-left,.pull-right,.center-block,.clearfix,
+.show,.hidden,.sr-only,.sr-only-focusable,.text-hide,
+.close,.caret</code>
+ </p>
+ 
+ <div class="clearfix" 
+ style="width:300px;height:200px;background-color:lightpink;
+ padding:10px">
+ <p class="pull-right close">&times;</p>
+ <p class="pull-left bg-primary">唯有牡丹真国色</p>
+ <p class="clearfix"></p>
+ <p class="bg-success">花开时节动京城<span class="caret"></span></p>
+ <p class="bg-info center-block" 
+ style="width:200px"
+ >平生不会相思</p>
+ <p><a href="" class="bg-warning">一会相思便害相思</a></p>
+ </div>
+ 
+ <h3>响应式实用工具</h3>
+ <p>隐藏/可见：<code>.visible-xs-*,.visible-sm-*,.visible-md-*,.visible-lg-*,
+ .hidden-xs,.hidden-sm,.hidden-md,.hidden-lg</code></p>
+ <div class="container" style="height:50px;background-color:Lavender ">
+  <div class="row visible-on">
+   <div class="col-xs-6 col-sm-3" style="background-color:LavenderBlush ">
+    <span class="visible-xs text-success">特别小型可见</span>
+	<span class="hidden-xs text-warning">特别小型不可见</span>
+   </div>
+   <div class="col-xs-6 col-sm-3" style="background-color:LavenderBlush ">
+    <span class="visible-sm">小型可见</span>
+	<span class="hidden-sm">小型不可见</span>
+   </div>
+   
+   <div class="clearfix visible-xs"></div>
+   
+   <div class="col-xs-6 col-sm-3" style="background-color:LavenderBlush ">
+    <span class="visible-md">中型可见</span>
+    <span class="hidden-md">中型不可见</span>
+   </div>
+   <div class="col-xs-6 col-sm-3" style="background-color:LavenderBlush ">
+    <span class="visible-lg text-info">大型可见</span>
+    <span class="hidden-lg text-danger">大型不可见</span>
+   </div>
+  </div>
+ </div>
+ 
+ <h3>字体图标: <code>glyphicon</code></h3>
+ <span class="glyphicon glyphicon-tree-deciduous"></span>
+ <h3>下拉菜单</h3>
+ <p>div: <code>.dropdown,.dropup</code></p>
+ <p>ul: <code>.dropdown-menu,.dropdown-menu-right</code></p>
+ <p>li: <code>dropdown-header,.disabled,.divider</code></p>
+ <p>button: <code>.dropdown-toggle,.data-toggle="dropdown"</code></p>
+ 
+ <div class="dropdown">
+ <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+ 导航<span class="caret"></span>
+ </button>
+ <ul class="dropdown-menu">
+ <li class="dropdown-header">JS</li>
+ <li><a href="" class="bg-success">JQUERY</a></li>
+ <li><a href="" class="bg-success">Bootstrap</a></li>
+ <li><a href="" class="bg-warning">AJAX</a></li>
+ <li class="divider"></li>
+ <li class="disabled"><a href="" class="bg-success">HTML</a></li>
+ <li><a href="" class="bg-success">CSS</a></li>
+ </ul>
+ </div>
+ 
+ <h3>按钮组</h3>
+ <p>div:<code>.btn-toolbar,.btn-group,.btn-group-vertical,
+ .btn-group-lg,.btn-group-sm,.btn-group-xs</code></p>
+ <div class="btn-toolbar">
+ <div class="btn-group">
+ <button class="btn btn-primary">芍药</button>
+ <button class="btn btn-warning">玉兰</button>
+ <button class="btn btn-info">牡丹</button>
+ </div>
+ <div class="btn-group-vertical">
+ <button class="btn btn-default">夜来香</button>
+ <button class="btn btn-link">满天星</button>
+ <button class="btn btn-error">玫瑰</button>
+ </div>
+ <div class="btn-group">
+ <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+ 花朵<span class="caret"></span>
+ </button>
+ <ul class="dropdown-menu">
+ <li><a href="" class="bg-success">莲花</a></li>
+ <li><a href="" class="bg-info">兰花</a></li>
+ <li><a href="" class="bg-danger">月季</a></li>
+ </ul>
+ </div>
+ </div>
+ 
+ <p>按钮下拉菜单</p>
+ <div class="btn-group">  
+ <button class="btn btn-warning">按钮组</button>
+ <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+ <span class="caret"></span></button>
+ <ul class="dropdown-menu">
+ <li><span class="text-danger">莲心</span></li>
+ <li class="divider"></li>
+ <li><span class="text-info">雪巧</span></li>
+  <li class="divider"></li>
+ <li><span class="text-warning">决明子</span></li>
+ </ul>
+ </div>
+ 
+ <h3>输入框组</h3>
+ <p>form: </p>
+ <p>div: <code>.input-group,.input-group-lg,.input-group-sm</code></p>
+ <p>span: <code>.input-group-addon</code></p>
+ <p>div: <code>.input-group-btn</code></p>
+ 
+ <div style="padding:10px;width:600px "> 
+ <form action="" class="form">
+  <div class="row">
+ <div class="col-lg-6">
+ <div class="input-group">
+ <span class="input-group-addon">@</span>
+ <input type="" class="form-control"/>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <div class="input-group">
+<div class="input-group-btn">
+<button class="btn btn-primary">下拉菜单</button>
+<button class="btn btn-primary dropdown-toggle" 
+data-toggle="dropdown">
+<span class="caret"></span></button>
+<ul class="dropdown-menu">
+<li><a href="">芍药</a></li>
+<li><a href="">玉兰</a></li>
+<li><a href="">木兰</a></li>
+<li class="divider"></li>
+<li><a href="">牡丹</a></li>
+</ul>
+</div>
+<input type="" class="form-control"/>
+ </div>
+ </div>
+ </div><!--row-->
+ </form>
+ </div>
+ 
+ <h3>导航元素</h3>
+ <p>标签页(ul): <code>.nav,.nav-tabs</code></p>
+ <p>胶囊式(ul): <code>.nav,.nav-pills</code></p>
+ <p>垂直胶囊(ul): <code>.nav,.nav-pills,.nav-stacked</code></p>
+ <p>两端对齐(ul): <code>.nav-justify</code></p>
+ <p>下拉菜单：</p>
+ <p>ul: <code>.nav,.nav-tabs/.nav-pills</code></p>
+ <p>li: <code>.dropdown</code></p>
+ <p>a: <code>.dropdown-toggle,data-toggle="dropdown"</code></p>
+ <p>ul: <code>dropdown-menu</code></p>
+ <p>带有下拉菜单的胶囊式标签页:</p>
+ <p>ul: <code>.nav,.nav-tabs/.nav-pills</code></p>
+ <p>li: <code>data-toggle="tab"/data-toggle="pill"</code></p>
+ <p>div: <code>.tab-content,.tab-pane</code></p>
+ 
+<!---->
+ <ul class="nav nav-tabs">
+ <li class="active"><a href="#">西塘</a></li>
+ <li><a href="#">乌衣巷</a></li>
+ <li class="dropdown">
+ <a href="" class="dropdown-toggle" data-toggle="dropdown">
+ 凤凰<span class="caret"></span>
+ </a>
+ <ul class="dropdown-menu">
+ <li><a href="#" class="bg-danger">桃子</a></li>
+ <li><a href="#">香蕉</a></li>
+ <li class="disabled"><a href="#">橙子</a></li>
+ <li><a href="#">草莓</a></li>
+ </ul>
+ </li>
+ <li><a href="#">丽江</a></li>
+ </ul>
+ <br />
+<!---->
+ <ul class="nav nav-pills">
+ <li class="active"><a href="">Home</a></li>
+ <li><a href="">SVN</a></li>
+ <li class="dropdown">
+ <a href="" class="dropdown-toggle" data-toggle="dropdown">
+ HTML <span class="caret"></span>
+ </a>
+ <ul class="dropdown-menu">
+ <li><a href="">CSS</a></li>
+ <li><a href="">JS</a></li>
+ </ul>
+ </li>
+ <li><a href="">PHP</a></li>
+ </ul>
+ <br />
+<!---->
+ <ul class="nav nav-tabs">
+ <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+ <li><a href="#menu1" data-toggle="tab">菜单 1</a></li>
+ <li><a href="#menu2" data-toggle="tab">菜单 2</a></li>
+ <li><a href="#menu3" data-toggle="tab">菜单 3</a></li>
+ </ul>
+ <div class="tab-content">
+ <div id="home" class="tab-pane fade in active">
+ <p>首页</p>
+ </div>
+ <div id="menu1" class="tab-pane fade">
+ <p>菜单 1</p>
+ </div>
+ <div id="menu2" class="tab-pane fade">
+ <p>菜单 2</p>
+ </div>
+ <div id="menu3" class="tab-pane fade">
+ <p>菜单 3</p>
+ </div>
+ </div>
+ <h3>导航栏</h3>
+ <h4>默认导航栏</h4>
+ <p>nav: <code>.navbar,.navbar-default, role="navigatiob"(增强可访问性)</code></p>
+ 
+ <p>div: <code>.navbar-header</code></p>
+ <p>a: <code>.navbar-brand</code></p>
+ 
+ <p>ul: <code>.nav,.navbar-nav</code></p>
+ <h4>响应式导航栏</h4>
+ <p>nav: <code>.navbar,.navbar-default, role="navigation"(增强可访问性)</code></p>
+ 
+ <p>div: <code>.navbar-header</code></p>
+ <p>button: <code>.navbar-toggle,
+ data-toggle="collapse",data-target=id</code></p>
+ <p>a: <code>.navbar-brand</code></p>
+ 
+ <p>div: <code>.collapse,.navbar-collapse,id</code></p>
+ <p>ul: <code>.nav,.navbar-nav</code></p>
+ <h4>导航栏中的表单</h4>
+ <p>form: <code>.navbar-form,.navbar-left</code></p>
+ <h4>导航栏中的按钮</h4>
+ <p>button: <code>.navbar-btn</code></p>
+ <h4>导航栏中的文本</h4>
+ <p>p: <code>.navbar-text</code></p>
+ <h4>组件对齐方式：<code>.navbar-left,.navbar-right</code></h4>
+ <h4>固定到顶部/底部(nav)：<code>.navbar-fixed-top,.navbar-fixed-bottom</code></h4>
+ <h4>静态的顶部(nav): <code>.navbar-static-top</code></h4>
+ <h4>反色导航栏(nav): <code>.navbar-inverse</code></h4>
+ 
+ <h3>面包屑导航</h3>
+ <p>ul: <code>.breadcrumb</code></p>
+ 
+ <h3>分页</h3>
+ <p>ul: <code>.pagination;.pagination-lg;.pagination-sm;
+ .pager</code></p>
+ <p>li: <code>.disabled;.active;.pervious;.next</code></p>
+ 
+ <h3>标签</h3>
+ <p><code>.label,.label-default/.label-primary/.label-success/.label-info
+ /.label-warning/.label-danger</code></p>
+ 
+ <h3>徽章</h3>
+ <p>span: <code>.badge</code></p>
+ 
+ <h3>超大屏幕</h3>
+ <p>div: <code>.jumbotron</code></p>
+  <p>div: <code>.container</code></p>
+ 
+ <h3>页面标题</h3>
+ <p>div: <code>.page-header</code></p>
+ 
+ <h3>缩略图</h3>
+ <p>div/a: <code>.thumbnail</code></p>
+ 
+ <h3>警告</h3>
+ <p>div: <code>.alert,.alert-success/.alert-warning/.alert-info/.alert-danger</code></p>
+ <p>可取消的警告</p>
+ <p>div: <code>.alert,.alert-success/.alert-warning/.alert-info/.alert-danger,.alert-dismissable</code></p>
+ <p>button: <code>data-dismiss="alert"</code></p>
+ <p>警告中的链接</p>
+ <p>a: <code>.alert-link</code></p>
+ 
+ <h3>进度条</h3>
+ <p><pre>
+ &lt;div class="progress
+ progress-striped <条纹进度条>
+ active <动画进度条>
+ "&gt;
+ &lt;div class="progress-bar 
+ progress-bar-*(success,info,warning,danger)"&gt;
+ 
+ &lt;/div&gt;
+ &lt;/div&gt;
+ </pre></p>
+ 
+<h3>多媒体对象</h3> 
+<p><pre>
+&lt;div class="media"&gt;
+&lt;a class="pull-left"&gt;
+...
+&lt;/a&gt;
+&lt;div class="media-body"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+or
+&lt;ul class="media-list"&gt;
+&lt;li class="media"&gt;
+...
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre></p>
+ 
+ 
+<h3>列表组</h3> 
+ <p>ul/div: <code>.list-group</code></p>
+ <p>li/a: <code>list-group-item</code></p>
+ <p>激活：<code>.active</code></p>
+ 
+ <h3>面板</h3>
+ <p>div: <code>.panel,.panel-*(default,primary,success,info,warning,danger)</code></p>
+ <p>面板标题(div)：<code>.panel-heading</code></p>
+ <p>面板标题(h*)：<code>.panel-title</code></p>
+ <p>面板内容(div): <code>.panel-body</code></p>
+ <p>面板脚注(div): <code>.panel-footer</code></p>
+ 
+ <h3>well是一种会引起内容凹陷显示或插图效果的容器</h3>
+ <p>div: <code>.well</code></p>
+ <p>尺寸(div)：<code>.well-lg,.well-sm</code></p>
+ 
+ <h2>插件</h2>
+ <h3>模拟框</h3>
+ <p>触发：<code>data-toggle="modal" data-target="#identifier"</code></p>
+ <p>模拟框：
+ <pre>
+ &lt;div class="modal fade" id="identifier" &gt;
+ &lt;div class="modal-dialog"&gt;
+ &lt;div class="modal-content"&gt;
+ &lt;div class="modal-header"&gt;
+ &lt;button data-dismiss="modal" class="close"&gt; &lt;/button&gt;
+ ...
+ &lt;/div&gt;
+ &lt;div class="modal-body"&gt;
+ ...
+ &lt;/div&gt;
+ &lt;div class="modal-footer"&gt;
+ ...
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ </pre>
+ </p>
+ 
+ <table class="table table-hover table-border">
+ <tr>
+ <th>选项</th>
+ <th>方法</th>
+ <th>事件</th>
+ </tr>
+ <tr class="active">
+ <td>backdrop</td>
+ <td>选项</td>
+ <td>show.bs.modal</td>
+ </tr>
+ <tr class="success">
+ <td>keyboard</td>
+ <td>toggle</td>
+ <td>shown.bs.modal</td>
+ </tr>
+ <tr class="warning">
+ <td>show</td>
+ <td>show</td>
+ <td>hide.bs.modal</td>
+ </tr>
+ <tr class="danger">
+ <td>remote</td>
+ <td>hide</td>
+ <td>hidden.ba.modal</td>
+ </tr>
+ <tr class="info">
+ <td>
+ <pre>
+ $("#identifier").modal({
+ backdrop:true/false
+ keyboard:false/true
+ show:true/false
+ })
+ </pre>
+ </td>
+ <td>
+ <pre>
+ $("identifier").modal('toggle')
+ $("identifier").modal('hide')
+ $("identifier").modal('show')
+ </pre>
+ </td>
+ <td>
+ <pre>
+$('#identifier').on('show.bs.modal', 
+  function () {
+  // 执行一些动作...
+})
+ </pre>
+ </td>
+ </tr>
+ </table>
+ 
+ <h3>滚动监听</h3>
+ <p><code>data-spy="scroll" data-target=id</code></p>
+ <p>当DOM的任意元素添加或删除时，可调用
+ <code>.scrollspy('refresh')</code>
+ <pre>
+ $('[data-spy="scroll"]').each(function(){
+ var $spy=$(this).scrollspy('refresh')
+ })
+ </pre>
+ </p>
+ <p>每当一个新项目被滚动监听激活时，触发该事件。
+ <code>activate.bs.scrollspy</code>
+ <pre>
+ $('#myScrollspy').on('activate.bs.scrollspy',
+ function(){
+ //执行一些动作。。
+ })
+ </pre>
+ </p>
+ 
+ <h3>标签页</h3>
+ <p>ul: <code>.nav .nav-tabs</code></p>
+ <p>a: <code>data-toggle="tab"</code></p>
+ <p>
+ <pre>
+ &lt;div class="tab-content"&gt;
+ &lt;div class="tab-pane fade in active"&gt;
+ ...
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"&gt;
+ &lt;/div&gt;
+... 
+ &lt;/div&gt;
+ </pre>
+ </p>
+ <table class="table table-border">
+ <tr>
+ <th>方法</th>
+ <th>事件</th>
+ </tr>
+ <tr class="danger">
+ <td>$().tab()</td>
+ <td>show.bs.tab</td>
+ </tr>
+ <tr class="success">
+ <td></td>
+ <td>shown.ba.tab</td>
+ </tr>
+ <tr class="info">
+ <td>
+ <pre>
+ $(function(){
+ $("id").tab('show');
+ })
+ </pre>
+ </td>
+ <td>
+ <pre>
+ $('a[data-toggle="tab"]').on('show.ba.tab',
+ function(e){
+ e.target //激活的标签页
+ e.relatedTarget //前一个激活的标签页
+ 
+ })
+ </pre>
+ </td>
+ </tr>
+ </table>
+ 
+ <h3>提示工具</h3>
+ <p>a: <code>data-toggle="tooltip" title=""
+ data-placement="let/top/bottom/right"
+ </code></p>
+ <p>提示工具必须用JQUERY激活
+ <code>
+ $(function(){
+ $("[data-toggle='tooltip']").tooltip();
+ });
+ </code>
+ </p>
+ 
+ <h3>弹出框</h3>
+ <p>
+ <pre>
+ &lt;a 
+ title=""
+ data-container="body"
+ data-toggle="popover"
+ data-placement="left/top/right/bottom"
+ data-content=""
+ data-trigger="hover/focus/click/manual";
+ &gt;
+ ...
+ &lt;/a&gt;
+ </pre>
+ </p>
+ <p>弹出框必须使用JQUERY激活
+ <pre>
+ $(function(){
+ $("[data-toggle='popover']").popover();
+ });
+ </pre>
+ </p>
+ 
+ <h3>警告框</h3>
+ <p> 
+ <pre>
+ &lt;div 
+ id="myAlert"
+ class="alert alert-*(success/warning/info/danger)"
+ &gt;
+ &lt;a class="close" data-dismiss="alert"&gt;
+ &times;
+ &lt;/a&gt;
+ ...
+ &lt;/div&gt;
+ </pre>
+ </p>
+ <p>
+ 关闭所有的警告框
+ <pre>
+ $(function(){
+ $(".close").click(function(){
+ $("#myAlert").alert('close');
+ })
+ })
+ </pre>
+ </p>
+ 
+ <h3>按钮插件</h3>
+ <p>单个切换：<code>data-toggle="button"</code></p>
+ <p>方法：
+ <code>
+ $().buton(' toggle/loading/reset/string')
+</code>
+</p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!--right end!!-->
+</div>
+
+</div>
+
+<div class="footer">
+the author is Xianxian Wang.
+</div>
+
+</body>
+</html>

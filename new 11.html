@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>练习</title>
+<link rel="stylesheet" href="c1.css" />
+<link rel="stylesheet" href="c3.css" />
+<link rel="stylesheet" href="c11.css" />
+<script src="https://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+
+
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="head">
+<div class="h1">
+<a href="" class="a1" style="font-size:2.5em">练习</a>
+</div>
+
+
+</div>
+
+<div class="middle">
+<ul class="u">
+<li class="l"><a href="" class="a2">HTML</a></li>
+<li class="l"><a href="" class="a2">CSS</a> </li>
+<li class="l"><a href="" class="a2">JS</a> </li>
+<li class="l"><a href="" class="a2">JQUERY</a></li>
+<li class="l"><a href="" class="a2">BOOTSTRAP</a></li>
+<li class="l"><a href="" class="a2">SQL</a></li>
+<li class="l"><a href="" class="a2">PHP</a></li>
+</ul>
+ 
+
+</div>
+
+<div class="center">
+<div class="left">
+<ul>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%201.html?">
+HTML事件</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%202.html"
+>
+HTML画布</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%203.html"
+>HTML音频、视频
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%204.html"
+>CSS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%205.html"
+>CSS3
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%206.html"
+>
+响应式设计
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%207.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%208.html"
+>HTML5
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%209.html"
+>JQUERY
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2010.html"
+>BOOTSTRAP</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2011.html"
+style="color:red">JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2012.html"
+>React
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2013.html"
+>Angular JS
+</a></li>
+
+
+
+</ul>
+</div>
+
+<div class="right">
+ <h2>JS</h2>
+ <p>字符串转换</p>
+ <textarea name="" id="" cols="30" rows="4">
+ parseInt()
+ parseFloat()
+ toString()
+ </textarea>
+ <p>函数</p>
+ <script type="text/javascript">
+ function sumResult(m){
+ var opt="函数的递归调用：\n";
+ function result(m){
+ opt="调用语句\n";
+ opt+="result=sum("+m+");\n";
+ opt+="调用步骤：\n";
+ sum(m);
+ opt+="计算结果：\n";
+ opt+="result="+sum(m)+"\n";
+ return opt;
+ }
+ function sum(m){
+ var result=0;
+ for(var i=m;i>0;i=i-2){
+ opt+="result="+i+"+sum("+(i-2)+")\n";
+ result+=i+(i-2);
+ }
+ return result;
+ }
+ document.getElementById("diGui").innerHTML=result(m);
+ }
+ </script>
+ <div id="diGui"></div>
+ <button onclick="sumResult(20)">click</button>
+ <h3>内置函数</h3>
+  <p id="ev">结果输出</p> 
+ <p>eval()把一个字符串当做JS表达式执行
+ <button onclick="ev()">click</button></p>
+ <script type="text/javascript">
+ function ev(){
+eval("x=10;y=2;document.getElementById('ev').innerHTML=x*y"); 
+ }
+ </script>
+ <p>isFinite()用来确定一个数是否为有限数值
+ <button onclick="num('Nan')">click</button></p>
+ <script type="text/javascript">
+ function num(m){
+var num;
+num=isFinite(m); 
+ document.getElementById("ev").innerHTML=num;
+ }
+
+ </script>
+<p>isNaN()判断数字是否为not a number（非数值）
+ <button onclick="isnan('string')">click</button></p> 
+ <script type="text/javascript">
+ function isnan(m){
+ var num;
+ num=isNaN(m);
+ document.getElementById("ev").innerHTML=num;
+ }
+ </script>
+ <p>parseInt,字符串转化为数字  <br />
+  parseFloat,字符串转化为浮点数
+ <button onclick="parse()">click</button></p>
+ <script type="text/javascript">
+ function parse(){
+ var x="nothing",y=10,z="2d";
+ var resultX,resultY;
+ resultX=parseInt("20")+y;
+ resultY=parseFloat(z)+y;
+ var result=parseInt(x)+y;
+ document.getElementById("ev").innerHTML=resultX+" "+resultY+" "+result;
+ }
+ </script>
+<p>escape()对字符串进行编码，使在计算机上可读 <br /> 
+ unescape()对字符串进行解码
+ <button onclick="esc()">click</button></p>
+ <script type="text/javascript">
+ function esc(){
+ var x=escape("hello world!!");
+ var y=unescape("hello%20world%21");
+ document.getElementById("ev").innerHTML="escape: "+x+"<br />"
+ +"unescape: "+y;
+ }
+ </script>
+ <p>escape加解密工具制作</p>
+ <p id="e1">hello world%21%22</p>
+ <p id="e2"></p>
+ <button onclick="on_esc()">加密</button>
+ <button onclick="on_unesc()">解密</button>
+ <script type="text/javascript">
+ function on_esc(){
+ var x=document.getElementById("e1").innerHTML;
+ document.getElementById("e2").innerHTML=escape(x);
+ }
+  function on_unesc(){
+ var x=document.getElementById("e1").innerHTML;
+ document.getElementById("e2").innerHTML=unescape(x);
+ }
+ </script>
+ <h3>字符串对象</h3>
+ <p id="str"></p>
+ <p>length获取字符串长度 <button onclick="len()">click</button></p>
+ <script type="text/javascript">
+ function len(){
+ var x="hello world";
+ document.getElementById("str").innerHTML=x.length;
+ }
+ </script>
+ <p>match()从字符串内索引到指定的值. 
+ <button onclick="mat()">click</button></p>
+ <script type="text/javascript">
+ function mat(){
+var x="hello world!";
+var y=x.match("world!");	 
+document.getElementById("str").innerHTML=y;
+ }
+ </script>
+ <p>search()检索指定字符串的起始位置 
+ <button onclick="sea()">click</button></p>
+ <script type="text/javascript">
+ function sea(){
+ var x="i love some";
+ var y=x.search("love");
+ var z=x.search("html");
+ document.getElementById("str").innerHTML=y+" "+z;
+ }
+ </script>
+ <p>indexOf()返回某个指定的字符串值在字符串中首次出现的位置
+<button onclick="ind()">click</button>
+ </p>
+ <p>replace()在字符串中用一些字符替换另一些字符
+ <button onclick="rep()">click</button></p>
+ <script type="text/javascript">
+ function ind(){
+ var x="i love spring day";
+ var y,z;
+ y=x.indexOf("spring");
+ z=x.indexOf("ay");
+ document.getElementById("str").innerHTML=y+" "+z;
+ }
+ function rep(){
+ var x="i love spring day";
+ var y;
+ y=x.replace("spring","winner");
+ document.getElementById("str").innerHTML=y;
+ }
+ </script>
+ <p>charAt()获取字符串中的某一个字符
+ <button onclick="cha()">click</button>
+ </p>
+ <script type="text/javascript">
+ function cha(){
+ var x="hello world";
+ var y=x.charAt(8);
+ document.getElementById("str").innerHTML=y;
+ }
+ </script>
+ <p>toUpperCase()转化为大写 <button onclick="toup()">click</button></p>
+ <p>toLowerCase()转化为小写 <button onclick="tolow()">click</button></p>
+ <script type="text/javascript">
+ var x="Hello World";
+ function toup(){
+ var y=x.toUpperCase();
+ document.getElementById("str").innerHTML=y;
+ }
+ function tolow(){
+ var y=x.toLowerCase();
+ document.getElementById("str").innerHTML=y;
+ }
+ </script>
+ <p>concat()将字符串连接起来 <button onclick="con()">click</button></p>
+ <script type="text/javascript">
+ function con(){
+ var x="昨日之日不可留, ";
+ var y="今日之日多烦忧, ";
+ var z="长风万里送秋雁 ";
+ var str1=x+y+z;
+ var str2=x.concat(y,z);
+ document.getElementById("str").innerHTML=str1+"<br />"+str2;
+ }
+ </script>
+ <p>localeCompare()比较两个字符，返回值为1,0，或者小于0的数字
+ <button onclick="loc()">click</button>
+ </p>
+ <script type="text/javascript">
+ function loc(){
+ var str1="hello world";
+ var str2="hello spring";
+ var str3=str1.localeCompare(str3);
+ document.getElementById("str").innerHTML=str3;
+ }
+ </script>
+ <p>split()把一个字符串分割成字符串数组
+ <button onclick="spl()">click</button>
+ </p>
+ <script type="text/javascript">
+ function spl(){
+ var str1="i love spring";
+ var str2,str3;
+ str2=str1.split(" ");
+ str3=str1.split("i");
+ document.getElementById("str").innerHTML=str2+"<br />"+str3;
+ 
+ }
+ </script>
+ <p>字符串.substring(开始位置，结束位置)，
+ 从字符串提取字符串中的某一部分字符串
+ <button onclick="sub()">click</button>
+ </p>
+ <script type="text/javascript">
+ function sub(){
+ var str1="昨日之日不可留";
+ var str2=str1.substring(3,8);
+ document.getElementById("str").innerHTML=str2;
+ }
+ </script>
+ <p>blink()以闪烁方式显示字符串(IE浏览器无效)
+ <button onclick="bli()">click</button>
+ </p>
+ <script type="text/javascript">
+ function bli(){
+ var x="hello world";
+ var y=x.blink();
+ document.getElementById("str").innerHTML=y;
+ }
+ </script>
+ <h3>日期对象</h3>
+ <p id="time"></p>
+ <p>Date()
+ <button onclick="dat()">click</button>
+ </p>
+ <p>getFullYear()
+ <button onclick="year()">click</button>
+ </p>
+ <p>getMonth()
+ <button onclick="month()">click</button>
+ </p>
+ <p>getDate()
+ <button onclick="date()">click</button>
+ </p>
+ <script type="text/javascript">
+ function dat(){
+ document.getElementById("time").innerHTML=Date();
+ }
+ function year(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.getFullYear();
+ }
+ function month(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.getMonth();
+ }
+ function date(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.getDate();
+ }
+ </script>
+ <p>setFullYear(year,month,day)
+ <button onclick="setyear()">click</button>
+ </p>
+ <p>setMonth(month,day)
+ <button onclick="setmonth()">click</button>
+ </p>
+ <p>setDate(day)
+ <button onclick="setdate()">click</button>
+ </p>
+ <script type="text/javascript">
+ function setyear(){
+ var d=new Date();
+ d.setFullYear(1997,2,13);
+ document.getElementById("time").innerHTML=d;
+ }
+ function setmonth(){
+ var d=new Date();
+ d.setMonth(12,11);
+ document.getElementById("time").innerHTML=d;
+ }
+ function setdate(){
+ var d=new Date();
+ d.setDate(29);
+ document.getElementById("time").innerHTML=d;
+ }
+ </script>
+ <p>getHours()
+ <button onclick="hour()">click</button>
+ </p>
+ <p>getMinutes()
+ <button onclick="minute()">click</button>
+ </p>
+ <p>getSeconds()
+ <button onclick="second()">click</button>
+ </p>
+ <script type="text/javascript">
+ function hour(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.getHours();
+ }
+ function minute(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.getMinutes();
+ }
+ function second(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.getSeconds();
+ }
+ </script>
+ <p>setHours(hour,min,sec,millisec)
+ <button onclick="sethour()">click</button>
+ </p>
+ <p>setMinutes(min,sec,millisec)
+ <button onclick="setmin()">click</button>
+ </p>
+ <p>setSeconds(sec,millisec)
+ <button onclick="setsec()">click</button>
+ </p>
+ <script type="text/javascript">
+ function sethour(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.setHours(9,41,3,34);
+ }
+ function setmin(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.setMinutes(42,5,13);
+ }
+ function setsec(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.setSeconds(6,15);
+ }
+ </script>
+ <p>toString()将日期对象转换为字符串
+ <button onclick="string()">click</button>
+ </p>
+ <p>toUTCString()根据世界时间(UTC)将日期对象转换为字符串
+ <button onclick="utcstring()">click</button>
+ </p>
+ <p>toLocaleString()根据本地时间将日期对象转换为字符串
+ <button onclick="localestring()">click</button>
+ </p>
+ <script type="text/javascript">
+ function string(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.toString();
+ }
+ function utcstring(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.toUTCString();
+ }
+ function localestring(){
+ var d=new Date();
+ document.getElementById("time").innerHTML=d.toLocaleString();
+ }
+ </script>
+ <h3>数组</h3>
+ <textarea name="" id="" cols="60" rows="10">
+ var att=new Array("i","love","spring");
+ or
+ var att=new Array();
+ att[0]="i";
+ att[1]="love";
+ att[2]="spring";
+ </textarea>
+ <p id="arr"></p>
+ <p>slice(start,begin)获取数组某段元素
+ <button onclick="sli()">click</button>
+ </p>
+ <p>unshift()在数组开头添加元素，并返回该数组
+ <button onclick="uns()">click</button>
+ </p>
+ <p>push()在数组末尾添加元素
+ <button onclick="pus()">click</button>
+ </p>
+ <p>shift()删除数组中的第一个元素
+ <button onclick="shi()">click</button>
+ </p>
+ <p>pop()删除数组的最后一个元素
+ <button onclick="pop()">click</button>
+ </p>
+ <p>toString()讲数组转换为字符串
+ <button onclick="tostring()">click</button>
+ </p>
+ <p>join(分隔符)讲数组连成一个字符串
+ <button onclick="joi()">click</button>
+ </p>
+ <p>concat()将多个数组连接在一起
+ <button onclick="cat()">click</button>
+ </p>
+ <p>sort(函数名)元素比较排序
+ <button onclick="sor()">click</button>
+ </p>
+ <p>reverse()反向排列
+ <button onclick="rev()">click</button>
+ </p>
+ <script type="text/javascript">
+ var att=new Array("a","b","c","d","e");
+ function rev(){
+ document.getElementById("arr").innerHTML=att.reverse();
+ }
+ function sli(){
+ document.getElementById("arr").innerHTML=att.slice(1,4);
+ }
+ function uns(){
+ document.getElementById("arr").innerHTML=att.unshift("A","B")+"<br />"+
+ att;
+ }
+ function pus(){
+ document.getElementById("arr").innerHTML=att.push("S","B")+
+ "<br />"+att;
+ }
+ function shi(){
+ document.getElementById("arr").innerHTML=att.shift()+"<br />"+att;
+ }
+ function pop(){
+ document.getElementById("arr").innerHTML=att.pop()+"<br />"+att;
+ }
+ function tostring(){
+ document.getElementById("arr").innerHTML=att.toString();
+ }
+ function joi(){
+ document.getElementById("arr").innerHTML=att.join("#");
+ }
+ function cat(){
+ var china=new Array("天津","无锡","成都");
+ var flower=new Array("夜来香","茉莉","芍药");
+ var color=new Array("red","black","cyan");
+ var att=china.concat(flower,color);
+ document.getElementById("arr").innerHTML=att.join("*");
+ }
+ function big(a,b){
+return a-b;
+ }
+ function sor(){
+ var num=new Array(3,21,4,15,7);
+ document.getElementById("arr").innerHTML=num.sort(big);
+ }
+ 
+ </script>
+ <h3>数值对象</h3>
+ <p>Number对象</p>
+ <p>Math对象</p>
+ <table border="1" rules="rows">
+ <caption>Math对象属性</caption>
+ <tr>
+ <th>属性</th>
+ <th>说明</th>
+ </tr>
+ <tr class="tr1">
+ <td>E</td>
+ <td>返回算术常量e，即自然对数的底数（约等于2.718）</td>
+ </tr>
+ <tr>
+ <td>LN2</td>
+ <td>返回2的自然对数（约等于0.693）</td>
+ </tr>
+ <tr class="tr1">
+ <td>LN10</td>
+ <td>返回10的自然对数（约等于2.302）</td>
+ </tr>
+ <tr>
+ <td>LOG2E</td>
+ <td>返回以2为底的e的对数（约等于1.414）</td>
+ </tr>
+ <tr class="tr1">
+ <td>LOG10E1</td>
+ <td>返回以10为底的e的对数（约等于0.434）</td>
+ </tr>
+ <tr>
+ <td>PI</td>
+ <td>返回圆周率（约等于3.14159）</td>
+ </tr>
+ <tr class="tr1">
+ <td>SORT1_2</td>
+ <td>返回2的平方根的倒数（约等于0.707）</td>
+ </tr>
+ <tr>
+ <td>SORT2</td>
+ <td>返回2的平方根（约等于1.414）</td>
+ </tr>
+ </table>
+ <p id="math"></p>
+ <button onclick="res()">click</button>
+ <script type="text/javascript">
+ function res(){
+ var att=new Array(Math.E,Math.LN2,Math.LN10,Math.LOG2E,Math.LOG10E1,Math.PI,Math.SORT1_2,Math.SORT2);
+ var re="";
+ for(var i=0;i<att.length;i++){
+ re+=att[i]+"; ";
+ }
+ document.getElementById("math").innerHTML=re;
+ }
+ </script>
+ <table>
+ <caption>Math对象的方法</caption>
+ <tr>
+ <th>方法</th>
+ <th>说明</th>
+ </tr>
+ <tr>
+ <td>sin(x)</td>
+ <td>返回数的正弦</td>
+ </tr>
+ <tr>
+ <td>cos(x)</td>
+ <td>返回数的余弦</td>
+ </tr>
+ <tr>
+ <td>tan(x)</td>
+ <td>返回角的正切</td>
+ </tr>
+ <tr>
+ <td>asin(x)</td>
+ <td>返回数的反正弦值</td>
+ </tr>
+ <tr>
+ <td>acos(x)</td>
+ <td>返回角数的反余弦值</td>
+ </tr>
+ <tr>
+ <td>atan(x)</td>
+ <td>以介于-π/2与π/2弧度之间的数值来返回x的反正切值</td>
+ </tr>
+ <tr>
+ <td>atan2(x,y)
+ <button onclick="atan2()">click</button>
+ </td>
+ <td>返回从x轴到点（x,y）的角度（介于-π/2与π/2弧度之间）</td>
+ </tr>
+ <tr>
+ <td>log(x)</td>
+ <td>返回数的自然对象</td> 
+ </tr>
+ <tr>
+ <td>max(x,y)</td>
+ <td>返回最大值</td>
+ </tr>
+ <tr>
+ <td>min(x,y)</td>
+ <td>返回最小值</td>
+ </tr>
+ <tr>
+ <td>sqrt()</td>
+ <td>返回数的平方根</td>
+ </tr>
+ <tr>
+ <td>exp(x)</td>
+ <td>返回e的指数</td>
+ </tr>
+ <tr>
+ <td>pow(x,y)</td>
+ <td>返回x的y次幂</td>
+ </tr>
+ <tr>
+ <td>round(x)</td>
+ <td>四舍五入</td>
+ </tr>
+ <tr>
+ <td>random()</td>
+ <td>0-1之间的随机数</td>
+ </tr>
+ <tr>
+ <td>ceil(x)
+ <button onclick="ceil()">click</button>
+ </td>
+ <td>对数进行上舍入</td>
+ </tr>
+ <tr>
+ <td>floor(x)
+ <button onclick="floor()">click</button>
+ </td>
+ <td>对数进行下舍入</td>
+ </tr>
+ <tr>
+ <td>toSource()</td>
+ <td>返回该对象的源代码</td>
+ </tr>
+ <tr>
+ <td>valueOf()</td>
+ <td>返回Math对象的原始值</td>
+ </tr>
+ <tr>
+ <td>abs()</td>
+ <td>返回数的绝对值</td>
+ </tr>
+ </table>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $("tr:even").css("background-color","lightpink");
+ })
+ </script>
+ <p id="func"></p>
+ <script type="text/javascript">
+ function atan2(){
+ document.getElementById("func").innerHTML=Math.atan2(23,45);
+ }
+ function ceil(){
+ document.getElementById("func").innerHTML=Math.ceil(4.56);
+ }
+ function floor(){
+ document.getElementById("func").innerHTML=Math.floor(4.56);
+ }
+ </script>
+ <h3>window对象</h3>
+ <p>window.open(URL,窗口名称，参数)
+ <button onclick="wOpen()">click</button>
+ </p>
+ <p>窗户名.close()关闭窗口
+ <button onclick="wClose()">click</button>
+ </p>
+ <p>改善窗口大小: <br />
+ window.resizeTo(x,y)
+ <button onclick="resizeToWindow()">click</button> <br />
+ window.resizeBy(x,y)
+ <button onclick="resizeByWindow()">click</button>
+ </p>
+ <script type="text/javascript">
+ function wOpen(){
+ window.open("http://www.baidu.com","","top=500px,left=500px,width=200,height=200,resizable,menubar");
+ }
+ function wClose(){
+ var subwindow= window.open("http://www.baidu.com","","top=500px,left=500px,width=200,height=200,resizable,menubar");
+ subwindow.close();
+ }
+ function resizeToWindow(){
+ window.resizeTo(200,200);
+ }
+ function resizeByWindow(){
+ window.resizeBy(50,50);
+ } 
+ </script>
+<ul class="window">
+<li><a href="javascript:window.history.back()">上一页</a></li>
+<li><a href="javascript:window.history.forward()">下一页</a></li>
+<li><a href="javascript:window.history.length-1">末页</a></li>
+<li><a href="javascript:window.history.go(-1)">返回上一页</a></li>
+</ul>
+<br />
+ <p style="clear:both">定时器： <br />
+ setTimeout()方法只执行一次. <br />
+ var 变量名=setTimeout(code,time);
+ <button onclick="settime()">click</button> <br />
+ clearTimeout(变量名) <br />
+ setInterval()方法可重复执行. <br /> 
+ var 变量名=setInterval(code,time); 
+ <button onclick="setval()">click</button> <br />
+ clearInterval() 
+ </p>
+ <div class="time">
+ 新年倒计时：<span id="cea"></span>
+ </div>
+ <script type="text/javascript">
+ function settime(){
+ setTimeout("welcome()",2000);
+ }
+ function welcome(){
+ alert("hello world");
+ }
+ var n=100;
+ function add(){
+ if(n>0){
+ n--;
+ document.getElementById("cea").innerHTML=n;
+ n--;
+ }
+ }
+ function setval(){ 
+ setInterval("add()",1000);
+ }
+ </script>
+ <h3>对话框简介</h3>
+ <p>alert()警告框
+ <button onclick="ale()">click</button>
+ </p>
+ <p>confirm()确认框，返回true or false.
+ <button onclick="con()">click</button>
+ </p>
+ <p>prompt()提示框，返回用户输入的字符串
+ <button onclick="pro()">click</button>
+ </p>
+ <script type="text/javascript">
+ function ale(){
+ alert("so tired");
+ }
+ function con(){
+ if(confirm("welcome to china")){
+ window.location.href="http://www.tust.edu.cn";
+ }
+ else
+ {
+ alert("bye bye");
+ }
+ }
+ function pro(){
+ var name=prompt("请输入您的名字");
+ alert("welcome " + name);
+ }
+ </script>
+ <h3>document对象</h3>
+ <p>title,文档标题
+ <button onclick="tit()">click</button>
+ </p>
+ <p id="file"></p>
+ <p>
+ URL,文档地址<br />
+ fileCreatedDate(),文档创建时间<br />
+ fileModifiedDate(),文档修改时间<br />
+ lastModified,文档修改时间<br />
+ fileSize,文档大小<br />
+ <button onclick="file()">click</button>
+ </p>
+ <script type="text/javascript">
+ function tit(){
+ document.title="javascript练习";
+ }
+ function file(){
+ var att="";
+ att+="文档地址： "+document.URL+"<br />";
+ att+="文档创建日期："+document.fileCreatedDate+"<br />";
+ att+="文档修改时间："+document.fileModifiedDate+"<br />";
+ att+="文档修改时间："+document.lastModified+"<br />";
+ att+="文档大小："+document.fileSize;
+ document.getElementById("file").innerHTML=att;
+ }
+ </script>
+ <table border="1" rules="rows">
+ <caption>颜色属性</caption>
+ <tr>
+ <td>fgColorbutton <button onclick="fg()">click</button></td>
+ <td>定义文档的前景色</td>
+ </tr>
+ <tr>
+ <td>bgColor</td>
+ <td>定义文档的背景色·</td>
+ </tr>
+ <tr>
+ <td>linkColor <button onclick="link()">click</button></td>
+ <td>定义未访问的超链接颜色</td>
+ </tr>
+ <tr>
+ <td>alinkColor</td>
+ <td>定义被激活的超链接颜色</td>
+ </tr>
+ <tr>
+ <td>vlinkColor</td>
+ <td>定义被访问的超链接颜色</td>
+ </tr>
+ </table>
+ <script type="text/javascript">
+ function fg(){
+ document.fgColor="DarkCyan";
+ document.bgColor = "LightCyan  ";
+ }
+  function link(){
+        document.linkColor = "cyan";
+        document.alinkColor = "green";
+        document.vlinkColor = "blue";
+ }
+ </script>
+ <h3>DOM对象</h3>
+ <table>
+ <caption>DOM常用的节点属性</caption>
+ <tr>
+ <th>属性</th>
+ <th>说明</th>
+ </tr>
+ <tr>
+ <td>parentNode</td>
+ <td>获取当前节点的父节点</td>
+ </tr>
+ <tr>
+ <td>childNodes</td>
+ <td>或许当前节点的子节点集合</td>
+ </tr>
+ <tr>
+ <td>firstChild</td>
+ <td>获取当前节点的第一个子节点</td>
+ </tr>
+ <tr>
+ <td>lastChild</td>
+ <td>获取当前节点的最后一个子节点</td>
+ </tr>
+ <tr>
+ <td>previousSibling</td>
+ <td>获取当前节点的前一个兄弟节点</td>
+ </tr>
+ <tr>
+ <td>nextSibling</td>
+ <td>获取当前节点的后一个兄弟节点</td>
+ </tr>
+ <tr>
+ <td>attributes</td>
+ <td>元素的属性列表</td>
+ </tr>
+ </table>
+ <p>获取节点：<br />
+document.getElementById();document.getElementsByName();
+ </p>
+ <p>创建节点：<br />
+ <textarea name="" id="" cols="100" rows="5">
+ var e=document.createElement("元素名");//创建元素节点
+ var t=document.createTextNode("元素内容");//创建文本节点
+ e.appendChild(t);//把元素内容插入到元素中去
+ </textarea> <br />
+ <button onclick="sim()">简单节点</button>
+ <button onclick="dom()">复杂节点</button>
+ </p>
+ <p id="tex"></p>
+ <script type="text/javascript">
+ function sim(){
+ var e=document.createElement("p");
+ var t=document.createTextNode("welcome to China");
+ e.appendChild(t);
+ document.getElementById("tex").appendChild(e);
+ }
+ function dom(){
+ var e=document.createElement("input");
+ e.style="button";
+ e.value="click";
+ document.getElementById("tex").appendChild(e);
+ }
+ </script>
+ <p>插入节点：<br />
+ obj.appendChild(new);<br />
+ obj.insertBefore(new,ref);
+ </p>
+ <p>删除节点：<br />
+ obj.removeChild(oldChild)</p>
+ <p>复制节点：<br />
+ obj.cloneNode(bool);
+参数obj表示被复制的节点，而参数bool是一个布尔值，取值如下：<br />
+1）1或true：表示复制节点本身以及复制该节点下的所有子节点；<br />
+2）0或false：表示仅仅复制节点本身，不复制该节点下的子节点；
+ </p>
+ <p>替换节点：<br />
+ obj.replaceChild(new,old);<br />
+ obj，表示被替换节点的父节点；<br />
+ new，表示替换后的新节点；<br />
+ old，需要被替换的旧节点。
+ </p>
+ <ul id="list">
+ <li>芍药</li>
+ <li>白芷</li>
+ <li id="tag">玉兰</li>
+ </ul>
+列项文本：<input type="text"  id="te"/> <br />
+<button onclick="append()">append</button> 
+<button onclick="insert()">insert</button>
+<button onclick="remove()">remove</button>
+<button onclick="clone()">clone</button>
+<button onclick="replace()">replace</button>
+ <script type="text/javascript">
+ function append(){
+ var e=document.createElement("li");
+ var t=document.getElementById("te").value;
+ var et=document.createTextNode(t);
+ e.appendChild(et);
+ document.getElementById("list").appendChild(e);
+ }
+ function insert(){
+ var e=document.createElement("li");
+ var t=document.getElementById("te").value;
+ var et=document.createTextNode(t);
+ e.appendChild(et);
+ var list=document.getElementById("list")
+ list.insertBefore(e,list.firstChild);
+ }
+ function remove(){
+ var list=document.getElementById("list");
+ list.removeChild(list.firstChild);
+ }
+ function clone(){
+ var list=document.getElementById("list");
+ var t=list.cloneNode(1);
+ list.appendChild(t);
+ }
+ function replace(){
+ var list=document.getElementById("list");/*被替换的父节点*/
+ var tag=document.getElementById("tag");/*被替换的子节点*/
+ var e=document.createElement("li");
+ var et=document.getElementById("te").value;
+ var t=document.createTextNode(et);
+ e.appendChild(t);
+ list.replaceChild(e,tag);
+ }
+ </script>
+ <p>innerHTML; innerText</p>
+ <p id="inner">
+ <i>此花开尽更无花</i>
+ </p>
+ innerHTML: <input type="text"  id="ht"/> <br />
+ innerText: <input type="text"  id="xt"/><br />
+ <button onclick="inner()">click</button>
+ <script type="text/javascript">
+ function inner(){
+ var d=document.getElementById("inner");
+ document.getElementById("ht").value=d.innerHTML;
+ document.getElementById("xt").value=d.innerText;
+ }
+ </script>
+ <p>点击任何地方会有广告弹出</p>
+ <!--<script type="text/javascript">
+ document.onclick=function(){
+ var fag=0;
+ if(fag==0)
+ {
+ window.open("http://www.tust.edu.cn","","top=700px,left=100px;width=200px,height=200px");
+ fag=1;
+ }
+ }-->
+ 
+ </script>
+ 
+ 
+ 
+ 
+ 
+<!--right end!!-->
+</div>
+
+</div>
+
+<div class="footer">
+the author is Xianxian Wang.
+</div>
+
+</body>
+</html>

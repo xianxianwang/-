@@ -1,0 +1,594 @@
+*{
+	box-sizing:border-box;
+}
+
+.footer
+{
+	clear:both;
+	background-color:gray;
+	color:white;
+	padding:15px;
+	margin:10px;
+	width:100%;
+	height:40px;
+	text-align:center;
+}
+.china
+{
+	width:100%;
+	height:auto;
+	border:1px transparent;
+	text-align:left;
+	padding:10px;
+	background-color:violet;
+	color:white;
+	font-weight:bold;
+	font-size:1.5em;
+}
+.flight
+{
+	float:left;
+	width:25%;
+	height:auto;
+	margin:0;
+	padding:0;
+	left:-30px;
+	position:relative;
+}
+.flight ul
+{
+	list-style-type:none;
+}
+.flight a
+{
+	display:block;
+	width:130px;
+	height:auto;
+	background-color:DodgerBlue ;
+	padding:5px;
+	margin-top:5px;
+	color:white;
+	border-radius:5px;
+	box-shadow:0px 0px 2px 1px aqua;
+}
+.flight a:hover
+{
+	background-color:blue;
+}
+.city
+{
+	float:left;
+	width:45%;
+}
+.what
+{
+	float:right;
+	width:20%;
+	background-color:DodgerBlue ;
+	height:auto;
+	text-align:center;
+	border-radius:5px;
+	padding:5px;
+}
+.blank:after
+{
+	content:"";
+	clear:both;
+	display:table;
+	padding:10px;
+}
+.end
+{
+	width:100%;
+	height:auto;
+	background-color:DodgerBlue ;
+	text-align:center;
+	padding:10px;
+	border-radius:5px;
+}
+/*添加断点*/
+@media only screen and (max-width:768px)
+{
+	[class*="col"]{
+		width:100%;
+	}
+}
+#can,#can1
+{
+	width:200px;
+	height:100px;
+	border:1px solid gray;
+}
+.drop1,.drop2
+{
+	float:left;
+	border:1px solid black;
+	width:250px;
+	height:100px;
+	padding:10px;
+	margin:10px;
+}
+.drop3
+{
+	border:1px solid black;
+	width:250px;
+	height:100px;
+	padding:10px;
+	margin:10px;
+}
+header,section,footer,aside,nav,article,figure
+{
+	display:block;
+}
+#sd{
+	background-color:aqua;
+	border:1px solid gray;
+	width:150px;
+	text-align:center;
+	padding:10px;
+	border-radius:360px;
+	height:150px;
+	
+}
+.container{
+	position:relative;
+	width:100%;
+	height:500px;
+	border:1px solid transparent;
+}
+.fig1,.fig2,.fig3{
+	position:relative;
+	width:100%;
+	height:75%;
+	animation:first;
+	opacity:1;
+}
+.fig2{
+	display:none;
+}
+.fig3{
+	display:none;
+}
+.num{
+	position:absolute;
+	color:white;
+	z-index:1;
+	top:5px;
+	left:10px;
+}
+.tex{
+	position:absolute;
+	color:white;
+	text-align:center;
+	left:50%;
+	top:65%;
+	z-index:1;
+}
+.picture1,.picture2,.picture3{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:75%;
+}
+.leftr, .rightr{
+	width:40px;
+	height:40px;
+	padding:5px;
+}
+.leftr{
+	position:absolute;
+	color:white;
+	z-index:1;
+	left:10px;
+	top:35%;
+	cursor:pointer;
+	font-size:1.5em;
+	transition:background 2s;
+}
+.rightr{
+	position:absolute;
+	color:white;
+	z-index:1;
+	right:8px;
+	top:35%;
+	cursor:pointer;
+	font-size:1.5em;
+	transition:background 2s;
+}
+.leftr:hover, .rightr:hover{
+	background:black;
+}
+@keyframes first{}
+
+@keyframes second{
+	from{opacity:0.4}
+	to{opacity:1}
+}
+.august{
+	width:100%;
+	height:500px;
+	border:1px solid transparent;
+}
+header{
+	position:relative;
+	width:100%;
+	height:40%;
+	background-color:cadetblue;
+	text-align:center;
+	color:white;
+}
+.pa1{ 
+	position:absolute;
+	left:45%;
+	top:20%;
+	font-size:1.5em;
+}
+.lp,.rp{
+	position:absolute;
+	top:50%;
+	font-size:1.5em;
+}
+.lp{
+	left:10px;
+}
+.rp{
+	right:10px;
+}
+.august ul{
+	list-style-type:none;
+	margin:0;
+}
+.august li{
+	display:inline;
+}
+.ul1,.ul2{
+	padding-top:5px;
+}
+.ul1 li,.ul2 li{
+	padding:6%;
+}
+nav{
+	width:100%;
+	height:10%;
+	background-color:darkgray;
+}
+article{
+	background-color:lightgray;
+}
+article ul{
+	padding-top:5px;
+}
+article li{
+	display:inline-block;
+	text-align:center;
+	margin:5px;
+	padding-right:12%;	
+}
+.ul3,.ul4{
+	padding-left:44px;
+}
+.ul3 li{
+	padding-right:13.1%;
+}
+.ul4 li{
+	padding-right:12.6%;
+}
+.li10{
+	color:red;
+}
+.alertWindow{
+	width:100%;
+	height:400px;
+	border:1px solid transparent;
+	z-index:1;
+}
+#fullWindow{
+	position:fixed;
+	left:0;
+	top:0;
+	display:none;
+	position:relative;
+	width:100%;
+	height:90%;
+	background-color:lightgray;
+	padding:10px;
+	z-index:1;
+	margin:0;
+	overflow:auto;
+}
+.wheader{
+	width:100%;
+	height:20%;
+	background-color:darkcyan;
+	border:1px solid transparent;
+	color:white;
+}
+.wheader p{
+	color:white;
+	font-size:1.5em;
+	padding-left:5px;
+	text-decoration:none;
+}
+.x{
+	position:absolute;
+	right:20px;
+	top:15px;
+	font-size:2em;
+	cursor:pointer;
+}
+.x:hover{
+	color:darkgray;
+}
+.wtext{
+	height:60%;
+	background-color:gray;
+}
+.wtext p{
+	margin:0;
+	text-indent:10px;
+	padding:30px;
+}
+.wfooter{
+	width:100%;
+	height:60px;
+	background-color:darkcyan;
+	border:1px solid transparent;
+	color:white;
+}
+.wfooter p{
+	position:absolute;
+	color:white;
+	font-size:1.5em;
+	padding-left:5px;
+	text-decoration:none;
+	right:30px;
+}
+.containWindow{
+	position:absolute;
+	margin:auto;
+	padding:0;
+	animation:myWindow 0.3s;
+}
+@keyframes myWindow{
+	from{top:300px;opacity:0}
+	to{top:0;opacity:1}
+}
+/*图片弹窗*/
+.imgModal:hover{
+	opacity:0.5;
+}
+#modal{
+	display:none;
+	background-color:black;
+	position:fixed;
+	left:0;
+	top:0;
+	padding:50px;
+	width:100%;
+	height:100%;
+	border:1px solid transparent;
+	z-index:1;
+	overflow:auto;
+}
+.xM{
+	position:absolute;
+	display:block;
+	top:10px;
+	left:96%;
+	color:white;
+	font-size:3em;
+	cursor:pointer;
+}
+.xM:hover{
+	color:gray;
+}
+.modal_container{
+	position:absolute;
+	width:55%;
+	height:54%;
+	top:20%;
+	left:23%;
+	animation:myModal 2s;
+	box-shadow:0px 0px 10px 10px lightgray;
+}
+@keyframes myModal{
+	from{transform:scale(0.1);opacity:0.1}
+	to{transform:scale(1); opacity:1}
+}
+.textModal{
+	position:absolute;
+	width:10%;
+	height:5%;
+	color:white;
+	border:1px solid transparent;
+	font-size:2em;
+	left:47%;
+	top:85%;
+}
+/*LightBox*/
+.row{
+	width:100%;
+	height:100px;
+	border:1px solid transparent;
+	padding:10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row .column{
+	float:left;
+	width:170px;
+	height:120px;
+	margin:8px;	
+	cursor:pointer;
+}
+.row .column img{
+ 	width:170px;
+	height:120px;
+	box-sizing:border-box;
+}
+.row .column img:hover{
+	opacity:0.6;
+}
+/*LightBox 弹窗设计*/
+#fModal{
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:1;
+	overflow:auto;
+	background-color:black;
+	width:100%;
+	height:100%;
+	border:1px solid transparent;
+	margin:0;
+}
+.xModal{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:10px;
+	right:20px;
+	color:white;
+	font-size:3em;
+}
+.xModal:hover{
+	color:gray;
+}
+.figCont{
+	width:99%;
+	height:90%;
+	margin-left:26%;
+}
+.mySlides{
+	display:none;
+	position:absolute;
+	width:90%;
+	height:90%;
+	border:1px solid transparent;
+	left:20%;
+	top:10%;
+}
+.figModal{
+	width:60%;
+	height:90%;
+	box-sizing:border-box;
+}
+.figNum{
+	position:absolute;
+	font-size:1em;
+	color:white;
+	top:10px;
+	left:10px;
+}
+.cap{
+	position:absolute;
+	font-size:2em;
+	color:white;
+	top:90%;
+	left:40%;
+}
+#fModal .column{
+	float:left;
+	width:170px;
+	height:120px;
+	margin:0;
+	padding-top:45%;
+	
+}
+#fModal .column img{
+ 	width:170px;
+	height:120px;
+	box-sizing:border-box;
+	opacity:0.6;
+}
+#fModal .column img:hover{
+	opacity:1;
+}
+.leftCursor{
+	position:absolute;
+	left:20%;
+	top:45%;
+	cursor:pointer;
+	color:white;
+	font-size:2em;
+}
+.ringhtCursor{
+	position:absolute;
+	right:26%;
+	top:45%;
+	cursor:pointer;
+	color:white;
+	font-size:2em;
+}
+.leftCursor:hover, .ringhtCursor:hover{
+	color:gray;
+}
+.active{
+	opacity:1;
+}
+
+* {
+  box-sizing: border-box;
+}
+ /*搜索框自动提示*/
+ #texSearch{
+	 width:100%;
+	 height:45px;
+	 margin-bottom:5px;
+ }
+ 
+.sc{
+	position:relative;
+	list-style-type:none;
+	display:block;
+	border:1px solid lightgray;
+	padding:0;
+	margin:0;
+}
+ .sc li{
+	 display:block;
+	 margin:0;
+	 background-color:gainsboro;
+	 border:1px solid gray;
+	 height:30px;
+	 padding:5px;
+ }
+ li.header{
+	 background-color:gray;
+ }
+ li.ls:hover{
+	 background-color:lightgray;
+ }
+/*表格数据搜索*/
+#tableSearch{
+	width:100%;
+	height:35px;
+	margin-bottom:5px;
+} 
+#dataBox{
+	width:100%;
+	border-collapse:collapse;
+	border: 1px solid #ddd;
+} 
+#dataBox tr{
+	border-bottom:1px solid silver;
+}
+#dataBox tr, #dataBox td{
+	padding:12px;
+}
+.firstTr{
+	background-color:lightgray;
+	font-weight:bold;
+	
+}
+#dataBox tr:hover
+{
+	background-color:lightgray;
+}
+ 
+ 
+ 

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>bootstrap</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body 
+style="padding-left:10%;width:80%"
+>
+
+<p>默认导航栏</p>
+<nav class="navbar navbar-default" role="navigation">
+ <div class="navbar-header">
+ <a href="" class="navbar-brand">花种</a>
+ </div>
+ <div>
+  <ul class="nav navbar-nav">
+ <li class="active"><a href="">玉兰</a></li>
+ <li><a href="">芍药</a></li>
+ <li class="dropdown">
+ <a href="" class="dropdown-toggle" data-toggle="dropdown">
+ 龙葵<span class="caret"></span>
+ </a>
+ <ul class="dropdown-menu">
+ <li><a href="">雪见</a></li>
+ <li><a href="">花楹</a></li>
+ </ul>
+ </li>
+ </ul>
+ </div>
+ </nav>
+<p>响应式导航栏</p>
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle navbar-btn" 
+data-toggle="collapse" 
+data-target="#example">
+<span class="glyphicon glyphicon-th-list"></span>
+</button>
+<a href="" class="navbar-brand">水果</a>
+</div>
+
+<div class="collapse navbar-collapse" id="example">
+<ul class="nav navbar-nav">
+<li class="active"><a href="">草莓</a></li>
+<li><a href="">橘子</a></li>
+<li class="dropdown">
+<a href="" class="dropdown-toggle" data-toggle="dropdown">
+苹果<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="">香蕉</a></li>
+<li><a href="">樱桃</a></li>
+<li class="divider"></li>
+<li><a href="">柚子</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<p>其他导航栏</p>
+<nav class="navbar navbar-default">
+<div class="navbar-header">
+<a href="" class="navbar-brand">花雾</a>
+</div>
+<form action="" class="navbar-form navbar-left">
+<div class="form-group">
+<input type="" class="form-control" placeholder="请输入。。。"/>
+</div>
+</form>
+<button type="button" class="btn navbar-btn btn-primary">
+提示按钮
+</button>
+<p class="navbar-text">花谢花飞花满天</p>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href="">
+<span class="glyphicon glyphicon-user"> 用户</span>
+</a>
+</li>
+<li>
+<a href="">
+<span class="glyphicon glyphicon-home"> 登录 </span>
+</a>
+</li>
+</ul>
+</nav>
+<p>面包屑导航</p>
+<ul class="breadcrumb">
+<li><a href="">一月</a></li>
+<li><a href="">二月</a></li>
+<li><a href="">三月</a></li>
+</ul>
+<p>分页</p>
+<ul class="pagination">
+<li class="active"><a href="">1</a></li>
+<li class="disabled"><a href="">2</a></li>
+<li><a href="">3</a></li>
+<li><a href="">4</a></li>
+<li><a href="">5</a></li>
+</ul>
+<ul class="pager">
+<li class="previous disabled"><a href="">上一页</a></li>
+<li class="next"><a href="">下一页</a></li>
+</ul>
+<p>标签</p>
+<span class="label label-default">默认</span>
+<span class="label label-primary">主要</span>
+<span class="label label-success">成功</span>
+<span class="label label-info">信息</span>
+<span class="label label-warning">警告</span>
+<span class="label label-danger">危险</span>
+<br /><br />
+<p>徽章</p>
+<p>胶囊式导航中的激活状态</p>
+<ul class="nav nav-pills">
+<li class="active">
+<a href="">
+首页<span class="badge">42</span>
+</a></li>
+<li><a href="">简介</a></li>
+<li><a href="">消息<span class="badge">3</span></a></li>
+</ul>
+<br />
+<p>列表导航中的激活状态</p>
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a href="">首页<span class="badge">42</span></a></li>
+<li><a href="">简介</a></li>
+<li><a href="">消息<span class="badge">3</span></a></li>
+</ul>
+<p>超大屏幕</p>
+<div class="jumbotron">
+<div class="container">
+<h1>欢迎登陆超大屏幕</h1>
+<h3>这是一个超大屏幕(Jumbotron)的实例</h3>
+<p><a href="" class="btn btn-primary">学习更多</a></p>
+</div>
+</div>
+<p>页面标题</p>
+<div class="page-header">
+<h1>页面标题
+<small>子标题</small>
+</h1>
+</div>
+<p>姑苏城外寒山寺，夜半钟声到客船。</p>
+
+<p>缩略图</p>
+<div class="row">
+<div class="col-sm-6 col-md-3">
+<a href="" class="thumbnail">
+<img src="f1.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+</div>
+<div class="col-sm-6 col-md-3">
+<a href="" class="thumbnail">
+<img src="f2.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+</div>
+<div class="col-sm-6 col-md-3">
+<a href="" class="thumbnail">
+<img src="f3.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+</div>
+<div class="col-sm-6 col-md-3">
+<a href="" class="thumbnail">
+<img src="f4.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-6 col-md-3">
+<div class="thumbnail">
+<a href="">
+<img src="s1.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+<div>
+<p>清明时节雨纷纷</p>
+<button class="btn btn-success">节气</button>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-3">
+<div class="thumbnail">
+<a href="">
+<img src="s2.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+<div>
+<p>路上行人欲断魂</p>
+<button class="btn btn-info">故里</button>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-3">
+<div class="thumbnail">
+<a href="">
+<img src="s3.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+<div>
+<p>借问酒家何处有</p>
+<button class="btn btn-warning">饮酒</button>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-3">
+<div class="thumbnail">
+<a href="">
+<img src="s4.jpg" alt="" style="width:250px;height:150px"/>
+</a>
+<div class="clearfix">
+<p>牧童遥指杏花村</p>
+<button class="btn btn-error pull-right">杏花村</button>
+</div>
+</div>
+</div>
+</div>
+<p>警告</p>
+<div class="alert alert-success alert-dismissable">
+<a href="" class="alert-link">成功提交</a>
+<button type="button" class="close" data-dismiss="alert">
+&times;</button>
+</div>
+<div class="alert alert-warning alert-dismissable">
+<a href="" class="alert-link">警告提交</a>
+<button class="close" data-dismiss="alert">&times;</button>
+</div>
+<div class="alert alert-info alert-dismissable">
+<a href="" class="alert-link">信息提交</a>
+<button class="close" data-dismiss="alert">&times;</button>
+</div>
+<div class="alert alert-danger alert-dismissable">
+<a href="" class="alert-link">危险提交</a>
+<button class="close" data-dismiss="alert">&times;</button>
+</div>
+<p>进度条</p>
+<div class="progress">
+<div class="progress-bar progerss-bar-success" style="width:20%">
+</div>
+<div class="progress-bar progress-bar-info" style="width:20%"></div>
+<div class="progress-bar progress-bar-warning" style="width:20%"></div>
+<div class="progress-bar progress-bar-danger" style="width:20%"></div>
+</div>
+<div class="progress progress-striped active">
+<div class="progress-bar progress-bar-success"
+style="width:40%"
+></div>
+</div>
+<p>多媒体对象</p>
+<div class="media">
+<a href="" class="pull-left">
+<img src="h2.jpg" alt="" 
+class="media-object"
+style="width:250px;height:150px"/>
+</a>
+<div class="media-body">
+<h4 class="media-heading">清明</h4>
+<p>清明时节雨纷纷，<br />路上行人欲断魂。
+<br />借问酒家何处去，<br />牧童遥指杏花村。</p>
+</div>
+</div>
+<br /><br />
+<ul class="media-list">
+<li class="media">
+<a href="" class="pull-left">
+<img src="h3.jpg" alt="" 
+class="media-object"
+style="width:250px;height:150px"/>
+</a>
+<div class="media-body">
+<h4>声声慢</h4>
+<p>冷冷清清，凄凄惨惨戚戚。<br />
+乍暖还寒时候，最难将息</p>
+<a href="" class="pull-left">
+<img src="meihua.jpg" alt="" 
+class="media-object"
+style="width:250px;height:150px"
+/>
+</a>
+<div class="media-body">
+<h4>雨霖铃</h4>
+<p>
+寒蝉凄切，对长亭晚，骤雨初歇。
+都门帐饮无绪，留恋处，兰舟催发。
+执手相看泪眼，竟无语凝噎。
+念去去，千里烟波，暮霭沉沉楚天阔。
+多情自古伤离别，更那堪，冷落清秋节！
+今宵酒醒何处？杨柳岸，晓风残月。
+此去经年，应是良辰好景虚设。
+便纵有千种风情，更与何人说？
+</p>
+<a href="" class="pull-left">
+<img src="hehua.jpg" alt="" 
+class="media-object"
+style="width:250px;height:150px"
+/>
+</a>
+<div class="media-body">
+<h4>赠荷花</h4>
+<p>
+世间花叶不相伦，花入金盆叶作尘。
+惟有绿荷红菡萏，卷舒开合任天真。
+此花此叶常相映，翠减红衰愁杀人。
+</p>
+</div>
+</div>
+</div>
+</li>
+<li class="media">
+<a href="" class="pull-left">
+<img src="star.jpg" alt="" 
+class="media-object"
+style="width:250px;height:150px"
+/>
+</a>
+<div class="media-body">
+<h4>秋夕 </h4>
+<p>
+银烛秋光冷画屏，<br /> 轻罗小扇扑流萤。 <br />
+天阶夜色凉如水，<br /> 坐看牵牛织女星。<br />
+</p>
+</div>
+</li>
+</ul>
+<p>列表组</p>
+<ul class="list-group">
+<li class="list-group-item">芍药</li>
+<li class="list-group-item">玉兰</li>
+<li class="list-group-item">龙葵</li>
+</ul>
+<div class="list-group">
+<a href="" class="active list-group-item">牡丹</a>
+<a href="" class="list-group-item">
+莲花 
+<span class="badge">新</span></a>
+<a href="" class="list-group-item">
+<h4 class="list-group-item-heading">玫瑰</h4>
+<p class="list-group-item-text">白玫瑰，红玫瑰</p>
+</a>
+</div>
+<p>面板</p>
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">
+花煞
+</h3>
+</div>
+<div class="panel-body">
+寒塘渡鹤影，冷月葬花魂
+</div>
+<table class="table table-hover table-border">
+<tr class="active">
+<th>小姐</th>
+<th>丫鬟</th>
+</tr>
+<tr class="success">
+<td>黛玉</td>
+<td>袭人</td>
+</tr>
+<tr class="info">
+<td>宝钗</td>
+<td>紫鹃</td>
+</tr>
+<tr class="warning">
+<td>探春</td>
+<td>鸳鸯</td>
+</tr>
+</table>
+<div class="panel-footer">
+红楼梦中人
+</div>
+</div>
+
+<div class="panel panel-danger">
+<div class="panel-heading">
+<h4 class="panel-title">金陵十二衩</h4>
+</div>
+<div class="panel-body">
+开篇鸿蒙
+</div>
+<div class="list-gruop">
+<a href="" class="list-group-item active">黛玉，宝钗，王熙凤，巧姐</a>
+<a href="" class="list-group-item">元春，迎春，探春，惜春</a>
+<a href="" class="list-group-item">李纨，史湘云，秦可卿，妙玉</a>
+</div>
+<div class="panel-footer">
+红楼一梦
+</div>
+</div>
+
+<div class="well well-sm">
+都云作者痴，谁解其中味
+</div>
+
+<p>模拟框</p>
+<button class="btn btn-primary" 
+data-toggle="modal"
+data-target="#myModal"
+>
+开启模拟框
+</button>
+<!--模拟框-->
+<div id="myModal" class="modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">
+&times;</button>
+</div>
+<div class="modal-body">
+<a href="" class="thumbnail">
+<img src="h2.jpg" alt=""/>
+</a>
+</div>
+<div class="modal-footer">
+<p>模拟框练习</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+$("#myModal").on('hidden.bs.modal',function(){
+alert("something raining");
+});
+});
+</script>
+
+<p>带有下拉菜单的导航栏</p>
+<nav class="navbar navbar-default" >
+<div class="navbar-header">
+<a href="" class="navbar-brand">红楼梦</a>
+</div>
+<ul class="nav navbar-nav">
+<li class="active"><a href="">贾宝玉</a></li>
+<li><a href="">贾政</a></li>
+<li class="dropdown">
+<a href="" class="dropdown-toggle" 
+data-toggle="dropdown"
+>十二钗
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="">黛玉</a></li>
+<li><a href="">宝钗</a></li>
+<li class="divider"></li>
+<li><a href="">王熙凤</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+
+<p>水平滚动</p>
+<nav class="navbar navbar-default navbar-inverse 
+navbar-fixed-top" 
+id="myNavbar"
+>
+<div class="navbar-header">
+<a href="" class="navbar-brand">Website</a>
+</div>
+<ul class="nav navbar-nav ">
+<li class="active">
+<a href="#section1">秋夜曲</a></li>
+<li><a href="#section2">嫦娥</a></li>
+<li><a href="#section3">瑶池</a></li>
+<li><a href="#section4">渭城曲</a></li>
+</ul>
+</nav>
+<div data-spy="scroll" data-target="#myNavbar" data-offset="50"
+style="height:200px;overflow:auto; position: relative;"
+>
+<div id="section1"
+style="width:98%;
+	height:150px;
+	background-color:AliceBlue;
+	padding:10px"
+class="section"
+>
+<h4>秋夜曲
+<a onclick="removeSection(this)" 
+>&times;</a></h4>
+<p>
+桂魄初生秋露微，<br />
+轻罗已薄未更衣。<br />
+银筝夜久殷勤弄，<br />
+心怯空房不忍归。
+</p>
+</div>
+<div id="section2"
+style="width:98%;
+	height:150px;
+	background-color:AntiqueWhite;
+	padding:10px"
+class="section"
+	>
+<h4>嫦娥
+<a onclick="removeSection(this)">&times;</a></h4>
+<p>
+云母屏风烛影深，<br />
+长河渐落晓星沉。<br />
+嫦娥应悔偷灵药，<br />
+碧海青天夜夜心。
+</p>
+</div>
+<div id="section3"
+style="width:98%;
+	height:150px;
+	background-color:Beige;
+	padding:10px"
+class="section"
+	>
+<h4>瑶池
+<a onclick="removeSection(this)">&times;</a></h4>
+<p>
+瑶池阿母绮窗开，<br />
+黄竹歌声动地哀。<br />
+八骏日行三万里，<br />
+穆王何事不重来。
+</p>
+</div>
+<div id="section4"
+style="width:98%;
+	height:150px;
+	background-color:CadetBlue;
+	padding:10px"
+class="section"
+	>
+<h4>渭城曲
+<a onclick="removeSection(this)">&times;</a></h4>
+<p>
+渭城朝雨浥轻尘，<br />
+客舍青青柳色新。<br />
+劝君更尽一杯酒，<br />
+西出阳关无故人。<br />
+</p>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+removeSection=function(e){
+$(e).parents(".section").remove();
+$('[data-spy="scroll"]').each(function(){
+var $spy=$(this).scrollspy('refresh');
+})
+}
+$("#myNavbar").scrollspy();
+});
+</script>
+
+<p>垂直滚动</p>
+<div class="row">
+<div class="col-md-3" id="secNavbar">
+<ul class="nav nav-pills nav-stacked">
+<li class="active">
+<a href="#section1">秋夜曲</a>
+</li>
+<li><a href="#section2">嫦娥</a></li>
+<li><a href="#section3">瑶池</a></li>
+<li><a href="#section4">渭城曲</a></li>
+</ul>
+</div>
+<div class="col-md-9"
+data-spy="scroll" data-target="#secNavbar"
+style="height:200px;overflow:auto; position: relative;"
+>
+<div id="section1"
+style="width:98%;
+	height:150px;
+	background-color:AliceBlue;
+	padding:10px"
+>
+<h4>秋夜曲</h4>
+<p>
+桂魄初生秋露微，<br />
+轻罗已薄未更衣。<br />
+银筝夜久殷勤弄，<br />
+心怯空房不忍归。
+</p>
+</div>
+<div id="section2"
+style="width:98%;
+	height:150px;
+	background-color:AntiqueWhite;
+	padding:10px"
+>
+<h4>嫦娥</h4>
+<p>
+云母屏风烛影深，<br />
+长河渐落晓星沉。<br />
+嫦娥应悔偷灵药，<br />
+碧海青天夜夜心。
+</p>
+</div>
+<div id="section3"
+style="width:98%;
+	height:150px;
+	background-color:Beige;
+	padding:10px"
+>
+<h4>瑶池</h4>
+<p>
+瑶池阿母绮窗开，<br />
+黄竹歌声动地哀。<br />
+八骏日行三万里，<br />
+穆王何事不重来。
+</p>
+</div>
+<div id="section4"
+style="width:98%;
+	height:150px;
+	background-color:CadetBlue;
+	padding:10px"
+>
+<h4>渭城曲</h4>
+<p>
+渭城朝雨浥轻尘，<br />
+客舍青青柳色新。<br />
+劝君更尽一杯酒，<br />
+西出阳关无故人。<br />
+</p>
+</div>
+</div>
+</div>
+
+<p>标签页</p>
+<hr />
+<p>激活的标签页：<span id="activeTab"></span></p>
+<p>前一个激活的标签页：<span id="reActiveTab"></span></p>
+<hr />
+<ul class="nav nav-tabs">
+<li><h4><b>唐诗</b></h4></li>
+<li class="active">
+<a href="#sec1" data-toggle="tab">秋夜曲</a>
+</li>
+<li>
+<a href="#sec2" data-toggle="tab">嫦娥</a>
+</li>
+<li>
+<a href="#sec3" data-toggle="tab">瑶池</a>
+</li>
+<li>
+<a href="#sec4" data-toggle="tab">渭城曲</a>
+</li>
+<li></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade in active" id="sec1">
+<p>
+桂魄初生秋露微，<br />
+轻罗已薄未更衣。<br />
+银筝夜久殷勤弄，<br />
+心怯空房不忍归。
+</p>
+</div>
+<div class="tab-pane fade" id="sec2">
+<p>
+云母屏风烛影深，<br />
+长河渐落晓星沉。<br />
+嫦娥应悔偷灵药，<br />
+碧海青天夜夜心。
+</p>
+</div>
+<div class="tab-pane fade" id="sec3">
+<p>
+瑶池阿母绮窗开，<br />
+黄竹歌声动地哀。<br />
+八骏日行三万里，<br />
+穆王何事不重来。
+</p>
+</div>
+<div class="tab-pane fade" id="sec4">
+<p>
+渭城朝雨浥轻尘，<br />
+客舍青青柳色新。<br />
+劝君更尽一杯酒，<br />
+西出阳关无故人。<br />
+</p>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+$('a[data-toggle="tab"]').on('shown.bs.tab',
+function(e){
+var actTab=$(e.target).text();
+var reActTab=$(e.relatedTarget).text();
+$("#activeTab ").html(actTab);
+$("#reActiveTab").html(reActTab);
+});
+});
+</script>
+
+<p>提示工具</p>
+<div>
+<a href="" class="btn btn-primary"
+data-toggle="tooltip" title="左侧" data-placement="left"
+>左侧tooltip</a>
+<a href="" class="btn btn-success"
+data-toggle="tooltip" title="默认" 
+>默认tooltip</a>
+<a href="" class="btn btn-info"
+data-toggle="tooltip" title="上侧" data-placement="top"
+>上侧tooltip</a>
+<a href="" class="btn btn-warning"
+data-toggle="tooltip" title="下侧" data-placement="bottom"
+>下侧tooltip</a>
+<a href="" class="btn btn-danger"
+data-toggle="tooltip" title="右侧" data-placement="right"
+>右侧tooltip</a>
+<a class="btn btn-default"
+data-toggle="tooltip"
+title="默认tooltip"
+data-trigger="click"
+>
+Tooltip
+</a>
+</div>
+<script type="text/javascript">
+$(function(){
+$("[data-toggle='tooltip']").tooltip();
+});
+</script>
+
+<p>弹出框</p>
+<div>
+<button
+class="btn btn-primary"
+data-toggle="popover"
+title="默认"
+data-container="body"
+data-content="默认弹出框"
+>默认</button>
+<button
+class="btn btn-success"
+data-toggle="popover"
+title="左侧"
+data-placement="left"
+data-container="body"
+data-content="这是一个左侧的弹出框"
+>左侧</button>
+<button
+class="btn btn-info"
+title="右侧"
+data-toggle="popover"
+data-placement="right"
+data-container="body"
+data-content="这是一个右侧的弹出框"
+>右侧</button>
+<button  
+class="btn btn-warning"
+data-toggle="popover"
+title="上侧"
+data-placement="top"
+data-container="body"
+data-content="这是一个上侧的弹出框"
+>上侧</button>
+<button  
+class="btn btn-danger"
+data-toggle="popover"
+title="下侧"
+data-placement="bottom"
+data-container="body"
+data-content="这是一个下侧的弹出框"
+>下侧</button>
+<button  
+class="btn btn-default"
+data-toggle="popover"
+title="hover"
+data-trigger="hover focus"
+data-container="body"
+data-content="这个触发方式为hover focus"
+>改变触发方式</button>
+</div>
+<script type="text/javascript">
+$(function(){
+$("[data-toggle='popover']").popover();
+});
+</script>
+
+<p>警告框</p>
+<div class="alert alert-warning">
+<a href="" class="close" data-dismiss="alert">
+&times;
+</a>
+<span>警告！</span>
+</div>
+<div class="alert alert-success">
+<a href="" class="close" data-dismiss="alert">
+&times;
+</a>
+<span>警告！</span>
+</div>
+
+<p>按钮插件</p>
+<button class="btn btn-primary"
+data-toggle="button"
+>
+单个切换
+</button>
+<p>方法</p>
+<button id="btn1" class="btn btn-success"
+>原始-toggle</button>
+<button
+id="btn2" class="btn btn-info"
+data-loading-text="loading"
+>原始-loading</button>
+<button
+id="btn3" class="btn btn-warning"
+data-loading-text="loading"
+>原始-reset</button>
+<button
+id="btn4" class="btn btn-danger"
+data-complete-text="complete";
+>原始-string</button>
+<script type="text/javascript">
+$(function(){
+$("#btn1").click(function(){
+$(this).button('toggle');
+})
+})
+$(function(){
+$("#btn2").click(function(){
+$(this).button('loading');
+})
+})
+$(function(){
+$("#btn3").click(function(){
+$(this).button('loading').delay(1000).queue(function(){
+$(this).button('reset');
+})
+})
+})
+$(function(){
+$("#btn4").click(function(){
+$(this).button('loading').delay(1000).queue(function(){
+$(this).button('complete');
+})
+})
+})
+</script>
+
+
+
+
+
+</body>
+</html>

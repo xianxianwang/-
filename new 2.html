@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>练习</title>
+<link rel="stylesheet" href="c1.css" />
+<script src="JS1.js"></script>
+
+</head>
+
+
+<body>
+<div class="head">
+<div class="h1">
+<a href="" class="a1">练习</a>
+</div>
+
+
+</div>
+
+<div class="middle">
+<ul class="u">
+<li class="l"><a href="" class="a2">HTML</a></li>
+<li class="l"><a href="" class="a2">CSS</a> </li>
+<li class="l"><a href="" class="a2">JS</a> </li>
+<li class="l"><a href="" class="a2">JQUERY</a></li>
+<li class="l"><a href="" class="a2">BOOTSTRAP</a></li>
+<li class="l"><a href="" class="a2">SQL</a></li>
+<li class="l"><a href="" class="a2">PHP</a></li>
+</ul>
+ 
+
+</div>
+
+<div class="center">
+<div class="left">
+<ul>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%201.html?">
+HTML事件</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%202.html"
+style="color:red"
+>
+HTML画布</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%203.html"
+>HTML音频、视频
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%204.html"
+>CSS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%205.html"
+>CSS3
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%206.html">
+响应式设计
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%207.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%208.html"
+>HTML5
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%209.html"
+>JQUERY
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2010.html"
+>BOOTSTRAP</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2011.html"
+>JS
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2012.html"
+>React
+</a></li>
+<li><a href="file:///C:/Users/Administrator/Desktop/HTML/new%2013.html"
+>Angular JS
+</a></li>
+
+
+</ul>
+
+
+</div>
+<div class="right">
+<p>颜色、样式和阴影</p>
+<p>属性</p>
+fillStyle: <br />
+<canvas  id="c1" ></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c1");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(20,20,150,100);
+
+</script>
+<br />
+strokeStyle: <br />
+<canvas id="c2"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c2");
+var ctx=c.getContext("2d");
+ctx.strokeStyle="blue";
+ctx.strokeRect(20,20,150,100);
+</script>
+<br />
+shadow-: <br />
+<canvas id="c3"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c3");
+var ctx=c.getContext("2d");
+ctx.fillStyle="pink";
+ctx.shadowColor="gray";
+ctx.shadowBlur=10;
+ctx.shadowOffsetX=20;
+ctx.fillRect(20,20,150,100);
+
+</script>
+<p>方法·</p>
+<canvas  id="c4" ></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c4");
+var ctx=c.getContext("2d");
+
+var grd=ctx.createLinearGradient(0,0,170,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(0.2,"orange");
+grd.addColorStop(0.4,"yellow");
+grd.addColorStop(0.6,"green");
+grd.addColorStop(0.8,"blue");
+grd.addColorStop(1,"purple");
+
+ctx.fillStyle=grd;
+ctx.shadowBlur=10;
+ctx.shadowColor="aqua";
+ctx.fillRect(20,20,150,100);
+
+</script>
+<canvas id="c5"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c5");
+var ctx=c.getContext("2d");
+
+var grd=ctx.createLinearGradient(0,0,0,170);
+grd.addColorStop(0,"aqua");
+grd.addColorStop(1,"red");
+
+ctx.fillStyle=grd;
+ctx.fillRect(20,20,150,100);
+</script>
+<br />
+<canvas  id="c6"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c6");
+var ctx=c.getContext("2d");
+
+var grd=ctx.createRadialGradient(85,50,5,100,90,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(0.4,"black");
+grd.addColorStop(0.8,"white");
+grd.addColorStop(1,"purple");
+
+ctx.fillStyle=grd;
+ctx.fillRect(20,20,150,100);
+</script>
+<br />
+<img src="D:/lamp.jpg" alt=""  id="xw" width="50"  height="50"/>
+<canvas id="c7"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c7");
+var ctx=c.getContext("2d");
+var img=document.getElementById("xw");
+var pat=ctx.createPattern(img,"repeat");
+ctx.rect(0,0,150,100);
+ctx.fillStyle=pat;
+ctx.fill();
+</script>
+<p>线条样式</p>
+<canvas id="c8"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c8");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.strokeStyle="red";
+ctx.lineCap="round";
+ctx.lineWidth=3;
+ctx.lineJoin="miter";
+ctx.miterLimit=5;
+ctx.moveTo(10,60);
+ctx.lineTo(70,60);
+ctx.lineTo(10,100);
+ctx.lineTo(40,20);
+ctx.lineTo(70,100);
+ctx.closePath();
+ctx.stroke();
+ctx.fillStyle="yellow";
+ctx.fill();
+</script>
+<p>矩形</p>
+<canvas id="c9"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c9");
+var ctx=c.getContext("2d");
+
+ctx.fillStyle="red";
+ctx.fillRect(20,20,200,100);
+ctx.clearRect(30,30,50,50);
+
+</script>
+<br />
+<canvas id="c10"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c10");
+var ctx=c.getContext("2d");
+
+ctx.rect(20,20,150,100);
+ctx.strokeStyle="blue";
+ctx.stroke();
+ctx.clip();
+
+ctx.fillStyle="red";
+ctx.fillRect(30,30,60,60);
+</script>
+<p>二次贝塞尔曲线</p>
+<canvas id="c11"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c11");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.quadraticCurveTo(20,100,200,20);
+ctx.stroke();
+</script>
+
+<p>三次贝塞尔曲线</p>
+
+<canvas id="c12"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c12");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.bezierCurveTo(20,100,200,100,200,20);
+ctx.stroke();
+</script>
+
+<p>弧，曲线</p>
+<canvas id="c13"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c13");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,70,50,0,1.5*Math.PI);
+ctx.fillStyle="red";
+ctx.stroke();
+ctx.fill();
+
+</script>
+<canvas id="c14"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c14");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.lineTo(100,20);
+ctx.arcTo(150,20,150,80,60);
+ctx.lineTo(150,130);
+ctx.strokeStyle="blue";
+ctx.stroke();
+</script>
+<br />
+<canvas id="c15"></canvas>
+<button id="but1"  onclick="isPoint()">color</button>
+<canvas id="c16"></canvas>
+<button id="but1"  ondblclick="isCir()">color</button>
+<p>转换</p>
+<canvas id="c17"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c17");
+var ctx=c.getContext("2d");
+ctx.strokeRect(5,5,25,15);
+ctx.scale(2,2);
+ctx.strokeRect(5,5,25,15);
+ctx.scale(2,2);
+ctx.strokeRect(5,5,25,15);
+ctx.rotate(30*Math.PI/180);
+ctx.fillStyle="pink";
+ctx.fillRect(20,2,25,15);
+</script>
+<canvas id="c18"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c18");
+var ctx=c.getContext("2d");
+ctx.fillStyle="yellowgreen";
+ctx.fillRect(5,5,75,55);
+ctx.translate(70,70)
+ctx.fillRect(5,5,75,55);
+</script>
+<p>文本</p>
+<canvas id="c19"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c19");
+var ctx=c.getContext("2d");
+ctx.font="30px arial";
+ctx.fillStyle="red";
+ctx.fillText("hello world", 10,50);
+ctx.strokeText("Nice Day",10,85);
+var txt="hello world";
+ctx.fillText("Width: "+ctx.measureText(txt).width,10,120);
+</script>
+<p>图像绘制</p>
+<img src="D:/l.gif" alt="" id="img1" width="100"  height="100"/>
+<br />
+<canvas id="c20"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c20");
+var ct=c.getContext("2d");
+var img=document.getElementById("img1");
+img.onload=function()
+{
+ct.drawImage(img,20,20,100,100);
+}
+</script>
+<br />
+<p>像素操作</p>
+<canvas id="c21"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c21");
+var ctx=c.getContext("2d");
+var imgData=ctx.createImageData(100,100);
+ctx.font="20px arial";
+ctx.fillText("width: "+imgData.width,150,30);
+for (var i=0;i<imgData.data.length;i+=4)
+{
+imgData.data[i+0]=255;
+imgData.data[i+1]=0;
+imgData.data[i+2]=0;
+imgData.data[i+3]=255;
+}
+ctx.putImageData(imgData,10,10);
+ctx.fillStyle="pink";
+ctx.fillRect(150,50,75,45);
+</script>
+<canvas id="c22"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c22");
+var ctx=c.getContext("2d");
+ctx.fillStyle="aqua";
+ctx.fillRect(10,10,75,45);
+function copyColor()
+{
+var imgData=ctx.getImageData(10,10,75,45);
+ctx.putImageData(imgData,30,65);
+}
+
+</script>
+<button onclick="copyColor()">copy</button>
+<p>透明度</p>
+<canvas id="c23"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c23");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(10,10,75,45);
+
+ctx.globalAlpha=0.2;
+ctx.fillStyle="green";
+ctx.fillRect(40,40,75,45);
+ctx.fillStyle="blue";
+ctx.fillRect(70,70,75,45);
+</script>
+<p>设置或返回新图像如何绘制到已有的图像上</p>
+<canvas id="c24"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c24");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(20,20,100,60);
+ctx.globalCompositeOperation="xor";
+ctx.beginPath();
+ctx.fillStyle="blue";
+ctx.arc(80,50,40,0,2*Math.PI);
+ctx.fill();
+
+</script>
+
+
+
+</div>
+
+
+</div>
+
+</body>
+</html>
